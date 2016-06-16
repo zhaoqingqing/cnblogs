@@ -1,11 +1,10 @@
-/*
+﻿/*
 功能：	为博客园文章自动生成目录
 原理：	抓取页面中的h1,h2,h3，生成<li>
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
-<script type='text/javascript'>
 var a = $(document);
 a.ready(function () {
     var b = $('body'),
@@ -104,4 +103,3 @@ a.ready(function () {
         }
     })
 });
-</script>

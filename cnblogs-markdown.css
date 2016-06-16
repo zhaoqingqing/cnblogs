@@ -3,7 +3,6 @@
 来源：http://www.cnblogs.com/MicroTeam/p/improve-cnblogs-markdown-css.html
 */
 
-<style type="text/css">
 .cnblogs-markdown {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -640,4 +639,3 @@
   position: relative;
   border-color: #4183c4;
 }
-</style>
