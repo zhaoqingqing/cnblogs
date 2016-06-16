@@ -1,0 +1,255 @@
+﻿/*
+说明：	基于博客园的SimpleMemory主题定制css  for http://www.cnblogs.com/zhaoqingqing/ 
+参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
+		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
+*/
+
+
+body {
+    line-height: 1.8em;/*设置所有字体的行间距*/
+}
+
+h1.postTitle{
+  font-size:200%;
+  padding:10px 0px;
+  margin-bottom:20px;
+  border-bottom:1px dotted #cd4900;
+}
+
+h1.postTitle a{
+  color:#cd4900
+}
+
+/*公告*/
+#blog-news{
+	line-height:1.8em;
+}
+
+/**日期**/
+#blogCalendar td u{
+  background:#cd4900;
+  border-radius:3px;
+  color:white;
+  padding:1px 2px;
+}
+
+/**引用**/
+#cnblogs_post_body blockquote{
+    background: url("http://images.cnblogs.com/cnblogs_com/marvin/668095/o_quote.png") no-repeat -75px -20px #F1FEDD;
+    border-radius: 10px;
+    padding: 15px 50px;
+    margin-left:0px;
+    border:none;
+}
+
+#cnblogs_post_body h2{
+  color:#fff;
+  padding-left:15px;
+  background:#6FA833 !important;
+  text-shadow:2px 2px 3px #222222;
+  font-family:"微软雅黑" , "宋体" , "黑体" ,Arial;
+  margin-bottom:5px;
+}
+
+#cnblogs_post_body h3{
+  color:#6FA833;
+  border-left: 13px solid #6FA833;
+  padding:5px;
+  background-color:#f5f5f5;
+}
+#cnblogs_post_body h4{
+  color:#cd4900;
+  border-bottom:1px solid #cd4900;
+}
+
+/*底部说明*/
+#cnblogs_post_body pre{
+  background-color:#f8f8f8;
+  padding:6px 10px;
+  border:1px solid #ccc;
+  line-height:19px;
+  font-size:13px;
+  overflow:auto;
+  border-radius:10px;
+}
+
+/*推荐按钮*/
+#div_digg{
+  position:fixed;
+  float:left;
+  display:block;
+  left:2%;
+  bottom:5px;
+  width:120px;
+  border:2px solid #6FA833;
+  padding:10px;
+  background-color:#fff;
+  border-radius:5px 5px 5px 5px !important;
+  box-shadow:0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+}
+
+/*向上,向下 按钮*/
+#toTop:hover,#toBottom :hover{
+  background-position:left top;
+}
+
+#toTop,#toBottom {
+	width:57px;
+	height:57px;
+	overflow:hidden;
+	position:fixed;
+	cursor:pointer;
+	bottom:12px;
+}
+
+#toTop{
+  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
+  right:20px;
+}
+
+#toBottom{
+	background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
+	-moz-transform:scaleY(-1);
+	-webkit-transform:scaleY(-1);
+	-o-transform:scaleY(-1);
+	transform:scaleY(-1);
+	/*IE*/
+	filter:FlipV;/*图片水平翻转*/
+	right:100px;
+}
+
+/**标签样式**/
+#MyTag1_dtTagList a,#EntryTag a,.catListTag a{
+  background-color:#6FA833 !important;
+  color:#FFFFFF !important;
+  padding:1px 3px 1px 3px;
+  border-radius:3px;
+}
+
+#blog_post_info{
+  padding:5px 5px;
+  margin-bottom:10px;
+  margin-top:10px;
+  border:#019875 1px dashed;
+  font-size:9pt;
+  color:#019875;
+}
+
+#green_channel{
+  padding:5px 5px;
+  border:none;
+}
+
+#author_profile_info{
+  margin-top:10px;
+}
+
+a:hover{
+  color:red;
+  text-decoration:underline;
+}
+
+#div_digg{
+  width:140px;
+}
+
+div.dayTitle{
+  background-color:silver;
+}
+
+div.dayTitle a{
+  color:green;
+}
+
+div.postTitle{
+  margin-bottom:10px;
+  border-left:10px solid #cd4900;
+  border-bottom:none;
+  padding:10px 5px;
+  font-size:200%;
+  font-weight:100;
+}
+
+div.postTitle a{
+  color:green !important;
+  font-weight:bold;
+}
+
+div.day{
+  margin-bottom:10px;
+  border-bottom:1px solid #000;
+}
+
+/**分类列表标题**/
+div.entrylistItem{
+  margin-bottom:10px;
+  border-bottom:1px solid #000;
+}
+
+div.entrylistPosttitle{
+  background-color:#6FA833;
+  font-family:"微软雅黑" , "宋体" , "黑体" ,Arial;
+  font-size:133%;
+  padding:5px 5px;
+}
+
+div.entrylistPosttitle a{
+  color:white
+}
+
+/**背景颜色**/
+#sideBar{
+  background:none;
+  /*border:1px dashed #4f4f4f;*/
+}
+
+/*所有的DIV*/
+div.forFlow{
+  background:none;
+  /*border:1px dashed #4f4f4f;*/
+}
+
+li.recent_comment_body{
+  color:gray!important;
+}
+
+li.recent_comment_author{
+  color:green!important
+}
+
+#sideBar h3{
+  font-size:200%;
+  margin-bottom:5px;
+  border-left:8px solid #6FA833;
+  padding:5px;
+  border-bottom:1px dashed #000;
+  color:#cd4900;
+}
+
+#sideBar a{
+  color:#000;
+}
+/**评论样式**/
+.feedbackItem{
+  border:1px dashed #676767;
+  background-color:#FAFAFF;
+  margin-bottom:5px;
+  margin-top:20px;
+  line-height:150%;
+}
+
+div.feedbackCon{
+  color:#000 !important;
+}
+
+.feedbackListSubtitle{
+  font-weight:bold;
+  border-bottom:dotted 1px #ccc
+}
+
+#cnblogs_post_body img{
+  border:3px solid #6CE26C;
+  border-radius:8px;
+  padding:5px;
+  max-width:100%;
+}
