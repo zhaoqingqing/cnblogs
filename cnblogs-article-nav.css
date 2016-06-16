@@ -4,6 +4,7 @@
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
+<style type="text/css">
 #sideToolbar {
 	position: fixed;
 	bottom: -12px;
@@ -152,3 +153,4 @@
 #sideToolbar-up: hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -74px -62px transparent
 }
+</style>

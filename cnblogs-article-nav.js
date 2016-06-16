@@ -5,6 +5,7 @@
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
+<script type='text/javascript'>
 var a = $(document);
 a.ready(function () {
     var b = $('body'),
@@ -103,3 +104,4 @@ a.ready(function () {
         }
     })
 });
+</script>

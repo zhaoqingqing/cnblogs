@@ -4,6 +4,7 @@
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
+<script type='text/javascript'>
 jQuery.fn.wait = function (func, times, interval) {
     var _times = times || -1,
         //100次
@@ -98,3 +99,4 @@ function cutstr(str, len) {
         return str;
     }
 }
+</script>
