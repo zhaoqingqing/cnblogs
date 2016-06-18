@@ -14,7 +14,7 @@ a.ready(function () {
         f = 'sideCatalog-catalog',
         g = 'sideCatalogBtn',
         h = 'sideToolbar-up',
-        i = '<div id="sideToolbar"style="display:none;">\<div class="sideCatalogBg" id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"></a>\</div>',
+        i = '<div id="sideToolbar"style="display:none;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
         j = '',
         k = 200,
         l = 0,
@@ -49,26 +49,26 @@ a.ready(function () {
         //if (!u.attr('id')) {
         //    u.attr('id', 'autoid-' + l + '-' + m + '-' + n)
         //};
-		//特殊处理:我的博客很多都是h3开始所以做个兼容
-        if (v.localName === 'h1' || v.localName === 'h2' || v.localName === 'h3') {
+		//特殊处理:如果文章内容很多都是h3，在此做兼容
+        if (v.localName === 'h1' || v.localName === 'h2') {
             l++;
             m = 0;                                  
 			//超过30字，后面加....
             if(text.length>30) text=text.substr(0,30)+"...";
-            //h1,h2,h3如果需要在前面自动添加序号就添加<li><span>' + l + '.&nbsp</span>)
+            //h1,h2,h3 如果需要在前面自动添加序号就添加<li><span>' + l + '.&nbsp</span>)
 			//j += '<li><span>' + l + '.&nbsp</span><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a><span class="sideCatalog-dot"></span></li>';
-            j += '<li class="h2Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a><span class="sideCatalog-dot"></span></li>';
-        } else if (v.localName === 'h4') {
+            j += '<li><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a><span class="sideCatalog-dot"></span></li>';
+        } else if (v.localName === 'h3') {
             m++;
             n = 0;
             if(q){
 	            if(text.length>28) text=text.substr(0,28)+"...";
 	            j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
         	}
-        } else if (v.localName === 'h5') {
+        } else if (v.localName === 'h4') {
             n++;
             if(r){
-				if(text.length>26) text=text.substr(0,26)+"...";
+		if(text.length>26) text=text.substr(0,26)+"...";
             	j += '<li class="h4Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
         	}
         }

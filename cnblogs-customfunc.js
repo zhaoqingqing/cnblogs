@@ -55,7 +55,7 @@ $(document).ready(function(){
 	$("#cnblogs_post_body").append('<br /><pre>本文版权归作者和博客园共有，来源网址：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a>. 欢迎各位转载，但是未经作者本人同意，转载文章之后<b>必须在文章页面明显位置给出作者和原文连接</b>，否则保留追究法律责任的权利。</pre>');
 });
 
-/*浮动*/
+/*浮动工具条*/
 $("#div_digg").wait(function(){
 	var html = '<div style="padding-bottom: 5px;">';
 	if($("#p_b_follow")!=null){
