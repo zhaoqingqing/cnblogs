@@ -43,6 +43,7 @@
 	padding-left: 23px;
 	position: relative
 }
+
 #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top {
 	cursor: pointer;
 	top: 0
@@ -58,11 +59,14 @@
 	position: absolute;
 	width: 10px
 }
+/*缩进1*/
 #sideCatalog li {
 	margin: 0px;
-	padding: 0 7px;
+	padding: 0px;
+	/*padding-left: 0px;*/
 	text-align: left;
-	position: relative
+	position: relative;
+	font-size: 14px;
 }
 #sideCatalog li: hover {
 	background-color: #f5f5f5
@@ -84,14 +88,11 @@
 	padding-right: 5px
 }
 
-/*生成的目录，设置h1/h2/h3/h4 目录的缩进和左边距*/ 
-#sideCatalog li.h1Offset {
-	padding-left: 4px;
-	text-indent: -4px;
-}
-#sideCatalog li.h2Offset {
-	padding-left: 20px;
-	text-indent: -16px;
+/*缩进2： h1/h2/h3/h4 目录的缩进和左边距*/ 
+#sideCatalog li.h1Offset,#sideCatalog li.h2Offset {
+	padding-left: 10px;
+	text-indent: 16px;
+	font-size: 10px;
 }
 #sideCatalog li.h3Offset {
 	padding-left: 50px;
@@ -100,6 +101,10 @@
 #sideCatalog li.h4Offset {
 	padding-left: 80px;
 	text-indent: -70px;
+}
+
+#sideCatalog li.h1Offset a,#sideCatalog li.h2Offset a {
+	font-weight: normal;
 }
 
 #sideCatalog a {

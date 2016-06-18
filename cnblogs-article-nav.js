@@ -49,7 +49,11 @@ a.ready(function () {
         //if (!u.attr('id')) {
         //    u.attr('id', 'autoid-' + l + '-' + m + '-' + n)
         //};
-		//特殊处理:如果文章内容很多都是h3，在此做兼容
+		
+		/*显示样式：
+		标题1/标题2
+			标题3
+		*/
         if (v.localName === 'h1' || v.localName === 'h2') {
             l++;
             m = 0;                                  
@@ -63,13 +67,13 @@ a.ready(function () {
             n = 0;
             if(q){
 	            if(text.length>28) text=text.substr(0,28)+"...";
-	            j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
+	            j += '<li class="h2Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
         	}
         } else if (v.localName === 'h4') {
             n++;
             if(r){
 		if(text.length>26) text=text.substr(0,26)+"...";
-            	j += '<li class="h4Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
+            	j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
         	}
         }
     });
