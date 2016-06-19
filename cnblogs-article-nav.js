@@ -14,7 +14,8 @@ a.ready(function () {
         f = 'sideCatalog-catalog',
         g = 'sideCatalogBtn',
         h = 'sideToolbar-up',
-        i = '<div id="sideToolbar"style="display:none;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+		//让sideToolbar 默认显示出来
+        i = '<div id="sideToolbar"style="display:block;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
         j = '',
         k = 200,
         l = 0,
@@ -34,7 +35,7 @@ a.ready(function () {
         var t = s.find('h2');
         var u = s.find('h3');
         if (t.length + u.length > p) {
-            q = false
+            //q = false //如果h2和h3太多，依然要生成h3
         }
     };
 	
@@ -100,10 +101,10 @@ a.ready(function () {
     $sideToolbar = $('#' + d);
     a.on('scroll', function () {
         var t = a.scrollTop();
-        if (t > k) {
+        /* if (t > k) {
             $sideToolbar.css('display', 'block')
         } else {
             $sideToolbar.css('display', 'none')
-        }
+        } */
     })
 });
