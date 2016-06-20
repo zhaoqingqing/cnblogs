@@ -10,7 +10,8 @@
 ##为页面Append版权说明
 在每一篇博客的底部，生动生成一段版权说明文字。
 ##ScrollTop，ScrollBottom浮动条
-- NOTE 回顶部，拉到底部，日前这个功能的js脚本还有bug，**待fix**
+为博客增加 ScrollTop，ScrollBottom 的快捷功能，目前这个功能的js脚本还有bug，**待fix**
+
 ##修改博客导航栏
 TODO：对博客的导航栏进行分类，比如增加主题性分类
 ##定制页面样式
