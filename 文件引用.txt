@@ -5,10 +5,12 @@
 
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://files.cnblogs.com/zhaoqingqing/cnblogs-customfunc.js"></script>
-<script type="text/javascript" src="http://files.cnblogs.com/zhaoqingqingcnblogs-article-nav.js"></script>
+<script type="text/javascript" src="http://files.cnblogs.com/zhaoqingqing/cnblogs-article-nav.js"></script>
+<script type="text/javascript" src="http://files.cnblogs.com/zhaoqingqing/cnblogs-navbar.js"></script>
+
 
 <!--
-如果在cnblogs中引用github库中的文件，chrome报以下错：
+在cnblogs页面中引用github库中的文件，chrome报以下错：
 Resource interpreted as Stylesheet but transferred with MIME type text/html
 Refused to execute script from ecause its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
 表现：css和js 无法加载出来 ，暂时未解决
@@ -22,3 +24,4 @@ Refused to execute script from ecause its MIME type ('text/html') is not executa
 <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-customfunc.js"></script>
 <script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-article-nav.js"></script>
+<script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-navbar.js"></script>
