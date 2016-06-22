@@ -36,7 +36,7 @@
 }
 /*目录形成的范围,去掉滚动条，自动展开*/ 
 #sideCatalog-catalog {
-	height: 325px;
+	height: 365px;/*文章目录的高度*/
 	padding-top: 18px;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -139,10 +139,12 @@
 	height: 45px;
 	margin-bottom: 5px;
 	margin-left: 5px;
-	position: relative;
+	position: fixed;/*位置改成固定*/
 	width: 45px;
 	margin-top: 10px;/*这个可以改小一点*/
-	outline: 0
+	outline: 0;
+	right: 280px;
+	bottom: 40px;
 }
 #sideCatalogBtn:hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -154px 0 transparent

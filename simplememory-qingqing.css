@@ -1273,7 +1273,7 @@ a {
   line-height:19px;
   font-size:13px;
   overflow:auto;
-  border-radius:10px;
+  border-radius:6px;
 }
 
 /*推荐按钮*/
@@ -1319,7 +1319,7 @@ a {
 		transform:scaleY(-1);
 		filter:FlipV;/*IE*/
 		right:280px;
-        bottom:180px;
+        bottom:140px;
 	}
 
 /**标签样式**/
