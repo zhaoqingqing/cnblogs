@@ -422,9 +422,9 @@ a {
     margin-bottom: 35px;
     word-wrap: break-word;
 }
-
-    .newsItem .catListTitle {
-    }
+/*    .newsItem .catListTitle {
+    }*/
+    
 /**日历控件样式开始**/
 
 #blog-calendar {
@@ -854,9 +854,9 @@ a {
     .comment_btn:hover {
         background: #333;
     }
-
+/*
 #comment_form_container {
-}
+}*/
 /****查看文章页面开始*************************/
 
 /****列表页面开始******************************/
@@ -1199,9 +1199,9 @@ a {
 }
 
 .postBody blockquote {
-    background: url('images/comment.gif')) no-repeat 25px 0px;
+    background: url('images/comment.gif') no-repeat 25px 0px;
     min-height: 35px;
-    _height: 35px;
+    height: 35px;
     line-height: 1.6em;
     color: #333;
 }
