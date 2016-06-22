@@ -1292,7 +1292,7 @@ a {
 }
 
 /*向上,向下 按钮*/
-#toTop:hover,#toBottom :hover{
+#toTop:hover,#toBottom:hover{
   background-position:left top;
 }
 
@@ -1302,23 +1302,24 @@ a {
 		overflow:hidden;
 		position:fixed;
 		cursor:pointer;
-		bottom:12px;
 	}
 
 	#toTop{
 	  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
-	  right:20px;
+	  right:280px;
+      bottom:240px;
 	}
 
 	#toBottom{
 		background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
-		-moz-transform:scaleY(-1);
+		/*图片水平翻转*/
+        -moz-transform:scaleY(-1);
 		-webkit-transform:scaleY(-1);
 		-o-transform:scaleY(-1);
 		transform:scaleY(-1);
-		/*IE*/
-		filter:FlipV;/*图片水平翻转*/
-		right:100px;
+		filter:FlipV;/*IE*/
+		right:280px;
+        bottom:180px;
 	}
 
 /**标签样式**/

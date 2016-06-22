@@ -68,7 +68,7 @@
 	position: relative;
 	font-size: 14px;
 }
-#sideCatalog li: hover {
+#sideCatalog li:hover {
 	background-color: #f5f5f5
 }
 #sideCatalog-catalog ul .active {
@@ -77,15 +77,15 @@
 #sideCatalog-catalog .active a {
 	color: #519cea
 }
-#sideCatalog-catalog a: hover {
+#sideCatalog-catalog a:hover {
 	color: #519cea
 }
-#sideCatalog span: first-child {
+#sideCatalog span:first-child {
 	color: #999;
 	font-family: Arial;
 	font-size: 14px;
 	font-weight: bold;
-	padding-right: 5px
+	padding-right: 5px;
 }
 
 /*缩进2： h1/h2/h3/h4 目录的缩进和左边距*/ 
@@ -144,7 +144,7 @@
 	margin-top: 10px;/*这个可以改小一点*/
 	outline: 0
 }
-#sideCatalogBtn: hover {
+#sideCatalogBtn:hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -154px 0 transparent
 }
 .sideCatalogBtnDisable {
@@ -159,6 +159,6 @@
 	width: 45px;
 	outline: 0
 }
-#sideToolbar-up: hover {
+#sideToolbar-up:hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -74px -62px transparent
 }
