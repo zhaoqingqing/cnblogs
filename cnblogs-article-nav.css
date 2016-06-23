@@ -59,11 +59,10 @@
 	position: absolute;
 	width: 10px
 }
-/*缩进1*/
+/*缩进1 根节点*/
 #sideCatalog li {
 	margin: 0px;
 	padding: 0px;
-	/*padding-left: 0px;*/
 	text-align: left;
 	position: relative;
 	font-size: 14px;
@@ -87,20 +86,20 @@
 	font-weight: bold;
 	padding-right: 5px;
 }
-
-/*缩进2： h1/h2/h3/h4 目录的缩进和左边距*/ 
+/*padding-left(内白)和text-indent(缩进)可以不同时存在*/
+/*缩进2： h1/h2 目录的缩进 都是二级节点*/ 
 #sideCatalog li.h1Offset,#sideCatalog li.h2Offset {
-	padding-left: 10px;
 	text-indent: 16px;
-	font-size: 10px;
+	font-size: 12px;
 }
 #sideCatalog li.h3Offset {
-	padding-left: 50px;
-	text-indent: -40px;/*文本缩进*/
+	text-indent: 45px;/*文本缩进*/
+	font-size: 10px;
+	font-weight: normal;
 }
 #sideCatalog li.h4Offset {
-	padding-left: 80px;
-	text-indent: -70px;
+	text-indent: 60px;
+	font-size: 8px;
 }
 
 #sideCatalog li.h1Offset a,#sideCatalog li.h2Offset a {

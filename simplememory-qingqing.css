@@ -1458,3 +1458,8 @@ div.feedbackCon{
   padding:5px;
   max-width:100%;
 }
+
+/*blog-common.css 定制*/
+.cnblogs_code{
+    border: none;
+}
