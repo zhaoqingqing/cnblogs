@@ -13,11 +13,11 @@ $(function(){
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/537262.html">Unity项目日志</a></li>');
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/563344.html">uGUI/Unity2d</a></li>');
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835738.html">NGUI</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/514068.html">Unity技巧积累</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/514068.html">Unity技巧&&经验</a></li>');
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/555471.html">Unity插件笔记</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835025.html">VR/AR</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835025.html">VR/AR知识</a></li>');
 	//$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/541042.html">我的随笔</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/tag/Editor/">Unity编辑器</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/529305.html">Unity Editor知识</a></li>');
 
 	//加载图片
 	/*
