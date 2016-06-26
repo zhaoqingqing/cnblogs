@@ -1267,12 +1267,12 @@ a {
 
 /*底部说明:之前用的部分插入代码插件也是pre，所以此css可能会破坏代码高亮*/
 #cnblogs_post_body pre{
-  background-color:#f8f8f8;
   padding:6px 10px;
+  /*background-color:#f8f8f8;*/
   /*border:1px solid #ccc;*/
-  line-height:19px;
-  font-size:13px;
-  overflow:auto;
+  /*line-height:19px;*/
+  /*font-size:13px;*/
+  /*overflow:auto;*/
   /*border-radius:6px;*/
 }
 
