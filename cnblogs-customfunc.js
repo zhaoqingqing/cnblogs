@@ -1,4 +1,4 @@
-﻿/*
+/*
 功能：	为博客自定义功能，比如推荐此文，Scrollbar;新功能添加在此
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
@@ -79,14 +79,38 @@ $(document).ready(function() {
         $('#toBottom').css('right','20px');
    }
     //版权信息
+    /*
     $('#cnblogs_post_body pre').find('>code').parent().css({
         'border': 'dashed 1px #aaa',
         'border-left': 'solid 2px #6CE26C'
     });
-
-    $("#cnblogs_post_body").append('<br /><pre>本文版权归作者和博客园共有，来源网址：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a>. 欢迎各位转载，但是未经作者本人同意，转载文章之后<b>必须在文章页面明显位置给出作者和原文连接</b>，否则保留追究法律责任的权利。</pre>');
-  
+    */
+    var signatureHtml ="";
+    signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a><br />';
+    signatureHtml += '关于我：乐于主动学习未知技术和知识，擅长Unity3D，游戏开发，.NET等领域。<br />';
+    signatureHtml += '本文版权归作者和博客园共有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。<br />';
+    signatureHtml += '如果本文对您有帮助，请点击<a id="recommendme",href="javascript:void(0);">【推荐】</a>，您的赞赏将鼓励我继续创作！想跟我一起进步么？那就<a id="followme" href="javascript:void(0);">【关注】</a>我吧。';
+    signatureHtml += '<div id="signatureTips"></div>';
+    if ($("#cnblogs_post_body").next().attr("id") == "MySignature") {
+        $("#cnblogs_post_body #MySignature").hide();
+        $("#cnblogs_post_body").next().show().html(signatureHtml);
+    }
+    else {
+        $("#cnblogs_post_body #MySignature").show().html(signatureHtml);
+    }
+    //fix：把click函数写在Html代码里在渲染出的html莫名的多了个=
+    $('#recommendme').on('click', function() {
+        votePost(cb_entryId,"Digg")
+        console.log("recommend success");
+        $("#signatureTips").html("感谢您的推荐！");
+    });
+    $('#followme').on('click', function() {
+        cnblogs.UserManager.FollowBlogger("a7e65336-5c2c-e111-b988-842b2b196315");
+        console.log("follow success");
+        $("#signatureTips").html("谢谢您的关注！");
+    });  
 });
+
 
 /*浮动工具条*/
 $("#div_digg").wait(function() {

@@ -1265,15 +1265,15 @@ a {
   border-bottom:1px solid #cd4900;
 }
 
-/*底部说明*/
+/*底部说明:之前用的部分插入代码插件也是pre，所以此css可能会破坏代码高亮*/
 #cnblogs_post_body pre{
   background-color:#f8f8f8;
   padding:6px 10px;
-  border:1px solid #ccc;
+  /*border:1px solid #ccc;*/
   line-height:19px;
   font-size:13px;
   overflow:auto;
-  border-radius:6px;
+  /*border-radius:6px;*/
 }
 
 /*推荐按钮*/
@@ -1334,9 +1334,10 @@ a {
   padding:5px 5px;
   margin-bottom:10px;
   margin-top:10px;
-  border:#019875 1px dashed;
+  border:#ccc  1px solid;
   font-size:9pt;
-  color:#019875;
+  color:#ccc ;
+  border-radius: 6px;
 }
 
 #green_channel{
@@ -1466,4 +1467,41 @@ div.feedbackCon{
 /*blog-common.css 定制*/
 .cnblogs_code{
     border: none;
+}
+
+#MySignature {
+  background-color:#f8f8f8;
+  padding:6px 10px;
+  padding-left: 170px;/*左侧附图片*/
+  background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;
+  border:1px solid #ccc;
+  
+  font-size:14px;
+  overflow:hidden;
+  border-radius:6px !important;
+  height: 150px;
+}
+
+/*签名栏图片 - 未有*/
+#MySignatureImg{
+  background: url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;
+  position: fixed;
+  width: 130px;
+  height: 130px;
+  left: 10px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 6px !important;
+  cursor: pointer;
+}
+
+/*签名中的超链接*/
+#recommendme,#followme{
+    cursor: pointer;
+    outline: none;
+    text-decoration: inherit;
+    color: green;
+}
+#signatureTips{
+    color:green;
 }
