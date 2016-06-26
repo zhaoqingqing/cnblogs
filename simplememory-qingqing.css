@@ -1453,10 +1453,14 @@ div.feedbackCon{
 }
 
 #cnblogs_post_body img{
-  border:3px solid #6CE26C;
+  /*border:2px solid  #dedede;*/
   border-radius:8px;
-  padding:5px;
+  /*padding:7px;*/
   max-width:100%;
+  display:block;
+   /*水平位移，垂直位移，模糊半径*/
+   -moz-box-shadow:2px 2px 4px #dedede; -webkit-box-shadow:2px 2px 5px #dedede; box-shadow:2px 2px 5px #dedede;
+    border: 0 none;
 }
 
 /*blog-common.css 定制*/

@@ -8,14 +8,14 @@
 var a = $(document);
 a.ready(function() {
     var b = $('body'),
-        c = 'cnblogs_post_body',
+        cnblogs_post_body = 'cnblogs_post_body',
         d = 'sideToolbar',
         e = 'sideCatalog',
         f = 'sideCatalog-catalog',
         g = 'sideCatalogBtn',
         h = 'sideToolbar-up',
         //默认显示文章目录
-        i = '<div id="sideToolbar"style="display:block;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+        navcontaint = '<div id="sideToolbar"style="display:block;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
         j = '',
         k = 200,
         l = 0,
@@ -24,16 +24,17 @@ a.ready(function() {
         o, p = 18,
         q = true,
         r = true,
-        s = $('#' + c);
-    if (s.length === 0) {
+        cnblogs_post_body_flag = $('#' + cnblogs_post_body);
+    //只有文章页面才会生成    
+    if (cnblogs_post_body_flag.length === 0) {
         return
     };
-    b.append(i);
-    o = s.find(':header');
+    b.append(navcontaint);
+    o = cnblogs_post_body_flag.find(':header');
     if (o.length > p) {
         r = false;
-        var t = s.find('h2');
-        var u = s.find('h3');
+        var t = cnblogs_post_body_flag.find('h2');
+        var u = cnblogs_post_body_flag.find('h3');
         if (t.length + u.length > p) {
             //q = false //如果h2和h3太多，依然要生成h3
         }

@@ -67,13 +67,25 @@ $(document).ready(function() {
             console.log("page not article");
         }
     });
-
+    //根据页面type调整scrollbar位置
+   if (document.getElementById("cnblogs_post_body")){
+        $('#toTop').css('right','280px');
+        $('#toBottom').css('right','280px');
+        //TODO 修改浮动条的文字 您的推荐将鼓励我继续创作
+        //$("#digg_tips").html("您的推荐将鼓励我继续创作");
+        //document.getElementById('digg_tips').innerHTML = 'xx';
+   }else{
+        $('#toTop').css('right','20px');
+        $('#toBottom').css('right','20px');
+   }
+    //版权信息
     $('#cnblogs_post_body pre').find('>code').parent().css({
         'border': 'dashed 1px #aaa',
         'border-left': 'solid 2px #6CE26C'
     });
 
     $("#cnblogs_post_body").append('<br /><pre>本文版权归作者和博客园共有，来源网址：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a>. 欢迎各位转载，但是未经作者本人同意，转载文章之后<b>必须在文章页面明显位置给出作者和原文连接</b>，否则保留追究法律责任的权利。</pre>');
+  
 });
 
 /*浮动工具条*/
