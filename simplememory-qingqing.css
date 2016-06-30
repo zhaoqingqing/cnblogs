@@ -1473,7 +1473,8 @@ div.feedbackCon{
   background-color:#f8f8f8;
   padding:6px 10px;
   padding-left: 170px;/*左侧附图片*/
-  background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;
+    /*background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;*/
+    background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_wechat_qingqing.png) no-repeat scroll 1% 50%;
   border:1px solid #ccc;
   
   font-size:14px;
