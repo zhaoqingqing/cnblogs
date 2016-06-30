@@ -1,7 +1,8 @@
 ﻿/*
 说明：	基于博客园的SimpleMemory主题定制css  for http://www.cnblogs.com/zhaoqingqing/ 
-源码： http://www.cnblogs.com/SkinUser.aspx?SkinName=SimpleMemory (simplememory模版源码)
-
+模版： http://www.cnblogs.com/SkinUser.aspx?SkinName=SimpleMemory (simplememory模版) 
+源码   http://www.cnblogs.com/skins/SimpleMemory/bundle-SimpleMemory.css
+日期： 2016-06-30(模版源码如果有更新，同步之)
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
@@ -1198,10 +1199,11 @@ a {
     margin-bottom: 1em;
 }
 
+/*引用：我部分博客的正文内容也用到此标签,所以去掉height限制*/
 .postBody blockquote {
-    background: url('images/comment.gif') no-repeat 25px 0px;
+    /*background: url('images/comment.gif') no-repeat 25px 0px;
     min-height: 35px;
-    height: 35px;
+    height: 35px;*/
     line-height: 1.6em;
     color: #333;
 }
@@ -1238,7 +1240,7 @@ a {
 
 /**引用**/
 #cnblogs_post_body blockquote{
-    background: url("http://images.cnblogs.com/cnblogs_com/marvin/668095/o_quote.png") no-repeat -75px -20px #F1FEDD;
+    /*background: url("http://images.cnblogs.com/cnblogs_com/marvin/668095/o_quote.png") no-repeat -75px -20px #F1FEDD;*/
     border-radius: 10px;
     padding: 15px 50px;
     margin-left:0px;
