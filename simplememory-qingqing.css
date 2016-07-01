@@ -1508,3 +1508,15 @@ div.feedbackCon{
 #signatureTips{
     color:green;
 }
+
+/*右侧公告栏*/
+#blog-news table{
+	border: 1px dashed green;
+    
+}
+#blog-news td{
+	border: 1px dashed green;
+    padding-left: 20px;
+    height: 40px;
+    vertical-align: middle;
+}
