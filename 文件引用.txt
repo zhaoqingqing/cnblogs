@@ -25,3 +25,9 @@ Refused to execute script from ecause its MIME type ('text/html') is not executa
 <script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-customfunc.js"></script>
 <script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-article-nav.js"></script>
 <script type="text/javascript" src="https://github.com/zhaoqingqing/cnblogs/blob/master/cnblogs-navbar.js"></script>
+
+
+
+<!-- simple主题灵感 -->
+
+主题部分灵感来自ggice的gsimple主题，可惜在作者的github上已找不到此主题了 https://github.com/GGICE

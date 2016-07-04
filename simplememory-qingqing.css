@@ -1391,7 +1391,10 @@ div.postTitle a{
 
 div.day{
   margin-bottom:10px;
-  border-bottom:1px solid #000;
+  border: none;
+  border-bottom:1px solid #EDEDED;;
+  box-shadow: 1px 1px 4px #ccc;
+  border-radius: 0 6px;
 }
 
 /**分类列表标题**/
