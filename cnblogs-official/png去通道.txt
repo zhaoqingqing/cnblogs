@@ -1,0 +1,4 @@
+1.下载Pngcrush工具，地址 http://pmt.sourceforge.net/pngcrush
+2.使用以下命令行：
+pngcrush_1_8.1_w64.exe -cc cnblogs-icon.png cnblogs-icon1.png
+pngcrush_1_8.1_w64.exe -cc cnblogs-logo.png cnblogs-logo1.png
