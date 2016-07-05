@@ -69,8 +69,9 @@ $(document).ready(function() {
     });
     //根据页面type调整scrollbar位置
    if (document.getElementById("cnblogs_post_body")){
-        $('#toTop').css('right','280px');
-        $('#toBottom').css('right','280px');
+       //TODO 能否获取css里的位置
+        $('#toTop').css('right','210px');
+        $('#toBottom').css('right','210px');
         //TODO 修改浮动条的文字 您的推荐将鼓励我继续创作
         //$("#digg_tips").html("您的推荐将鼓励我继续创作");
         //document.getElementById('digg_tips').innerHTML = 'xx';

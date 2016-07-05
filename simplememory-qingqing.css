@@ -121,7 +121,7 @@ a {
 /*****home和头部开始**************************/
 #home {
     margin: 0 auto;
-    width: 72%;
+    width: 92%;
     min-width: 980px;
     background-color: #fff;
     padding: 30px;
@@ -1288,9 +1288,9 @@ a {
 /*推荐按钮*/
 #div_digg{
   position:fixed;
-  float:left;
+  float:right;
   display:block;
-  left:2%;
+  right: -10px;
   bottom:5px;
   width:120px;
   border:2px solid #6FA833;
@@ -1315,8 +1315,8 @@ a {
 
 	#toTop{
 	  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
-	  right:280px;
-      bottom:240px;
+	  right:210px;
+      bottom:94px;
 	}
 
 	#toBottom{
@@ -1327,8 +1327,8 @@ a {
 		-o-transform:scaleY(-1);
 		transform:scaleY(-1);
 		filter:FlipV;/*IE*/
-		right:280px;
-        bottom:140px;
+		right:210px;
+        bottom:14px;
 	}
 
 /**标签样式**/

@@ -6,10 +6,10 @@
 
 #sideToolbar {
 	position: fixed;
-	bottom: -20px;/*太小在手机上体验不是很好*/
+	bottom: 140px;/*太小或太低部在手机上体验不是很好*/
 	right: 25px;
-	width: 250px;
-	height: 440px
+	width: 300px;
+	height: 450px
 }
 #sideCatalog{
 	background-color:#fff;
@@ -134,16 +134,15 @@
 #sideCatalogBtn {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll 0 0 transparent;
 	cursor: pointer;
-	display: block;
+	display: none;/*把它隐藏吧*/
 	height: 45px;
 	margin-bottom: 5px;
 	margin-left: 5px;
-	position: fixed;/*位置改成固定*/
+	position: relative;/*位置改成固定*/
 	width: 45px;
 	margin-top: 10px;/*这个可以改小一点*/
 	outline: 0;
-	right: 280px;
-	bottom: 40px;
+
 }
 #sideCatalogBtn:hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -154px 0 transparent
