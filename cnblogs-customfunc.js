@@ -46,13 +46,13 @@ function focusFollow() {
 }
 
 $(document).ready(function() {
-    $("<div id='toTop'style='zoom:0;'></div>").appendTo($("body"));
+    $("<div id='toTop'  title='回顶部'></div>").appendTo($("body"));
     $("#toTop").bind("click", function() {
         $("body,html").animate({
             scrollTop: '0px'
         }, 200);
     });
-    $("<div id='toBottom' style='zoom:0;'></div>").appendTo($("body"));
+    $("<div id='toBottom' title='到底部'></div>").appendTo($("body"));
     $("#toBottom").bind("click", function() {
         //文章页下拉到评论区，其它页面拉到顶部
         if (document.getElementById("blog_post_info_block")) {

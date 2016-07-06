@@ -7,16 +7,18 @@
 #sideToolbar {
 	display: block;
 	position: fixed;
-	bottom: 140px;/*太小或太低部在手机上体验不是很好*/
+	bottom: 160px;/*太小或太低部在手机上体验不是很好*/
 	right: 25px;
+	/*NOTE size和子节点保持大致 */
 	width: 300px;
-	height: 450px
+	height: 400px
 }
 #sideCatalog{
 	background-color:#fff;
 	padding-bottom:10px;
 	border-radius:5px;
 }
+/*TODO bar位置调整*/
 #sideCatalog-sidebar {
 	-moz-border-bottom-colors: none;
 	-moz-border-left-colors: none;

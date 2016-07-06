@@ -9,13 +9,13 @@ var a = $(document);
 a.ready(function() {
     var b = $('body'),
         cnblogs_post_body = 'cnblogs_post_body',
-        d = 'sideToolbar',
+        sideNavBody = 'sideToolbar',
         sideCatalog = 'sideCatalog',
         f = 'sideCatalog-catalog',
         sideCatalogCtrl = 'sideCatalogBtn',
         h = 'sideToolbar-up',
         //默认显示文章目录
-        navcontaint = '<div id="sideToolbar">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);" title="" id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+        navcontaint = '<div id="sideToolbar">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\</div>\<a href="javascript:void(0);" title="[隐藏/显示]目录" id="sideCatalogBtn" class="sideCatalogBtnDisable"></a>',
         j = '',
         k = 200,
         l = 0,
@@ -89,10 +89,10 @@ a.ready(function() {
     $sideCatelog = $('#' + sideCatalog);
     $('#' + sideCatalogCtrl).on('click', function() {
         if ($(this).hasClass('sideCatalogBtnDisable')) {
-            $sideCatelog.css('visibility', 'hidden')
+            $("#"+sideNavBody).css('display', 'none')
             $('#' + sideCatalogCtrl).title = "隐藏目录";
         } else {
-            $sideCatelog.css('visibility', 'visible')
+            $("#"+sideNavBody).css('display', 'block')
             $('#' + sideCatalogCtrl).title = "显示目录";
         };
         $(this).toggleClass('sideCatalogBtnDisable')
@@ -102,7 +102,7 @@ a.ready(function() {
             scrollTop: 0
         }, 500)
     });
-    $sideToolbar = $('#' + d);
+    $sideToolbar = $('#' + sideNavBody);
     a.on('scroll', function() {
         var t = a.scrollTop();
         //我要一直显示文章目录
