@@ -1,5 +1,5 @@
 ﻿/*
-功能：	为博客园文章自动生成目录
+功能：	自动为博客园文章生成目录
 原理：	抓取页面中的h1,h2,h3，生成<li>
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 	  http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
@@ -10,12 +10,12 @@ a.ready(function() {
     var b = $('body'),
         cnblogs_post_body = 'cnblogs_post_body',
         d = 'sideToolbar',
-        e = 'sideCatalog',
+        sideCatalog = 'sideCatalog',
         f = 'sideCatalog-catalog',
-        g = 'sideCatalogBtn',
+        sideCatalogCtrl = 'sideCatalogBtn',
         h = 'sideToolbar-up',
         //默认显示文章目录
-        navcontaint = '<div id="sideToolbar"style="display:block;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+        navcontaint = '<div id="sideToolbar">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);" title="" id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
         j = '',
         k = 200,
         l = 0,
@@ -86,12 +86,14 @@ a.ready(function() {
     $('body').scrollspy({
         target: '.sideCatalogBg'
     });
-    $sideCatelog = $('#' + e);
-    $('#' + g).on('click', function() {
+    $sideCatelog = $('#' + sideCatalog);
+    $('#' + sideCatalogCtrl).on('click', function() {
         if ($(this).hasClass('sideCatalogBtnDisable')) {
             $sideCatelog.css('visibility', 'hidden')
+            $('#' + sideCatalogCtrl).title = "隐藏目录";
         } else {
             $sideCatelog.css('visibility', 'visible')
+            $('#' + sideCatalogCtrl).title = "显示目录";
         };
         $(this).toggleClass('sideCatalogBtnDisable')
     });

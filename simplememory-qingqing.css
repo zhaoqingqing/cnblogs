@@ -1290,8 +1290,8 @@ a {
   position:fixed;
   float:right;
   display:block;
-  right: -10px;
-  bottom:5px;
+  right: -6px;
+  bottom:20px;
   width:120px;
   border:2px solid #6FA833;
   padding:10px;
@@ -1316,7 +1316,7 @@ a {
 	#toTop{
 	  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
 	  right:210px;
-      bottom:94px;
+      bottom:114px;
 	}
 
 	#toBottom{
