@@ -1285,15 +1285,16 @@ a {
   /*border-radius:6px;*/
 }
 
-/*推荐按钮*/
+/*推荐按钮 NOTE 不放在右侧了*/
 #div_digg{
-  position:fixed;
+  /*position:fixed;*/
   float:right;
   display:block;
-  right: -6px;
+  /*right: -6px;
   bottom:20px;
   width:120px;
-  border:2px solid #6FA833;
+  border:2px solid #6FA833;*/
+  margin-right: 0px;
   padding:10px;
   background-color:#fff;
   border-radius:5px 5px 5px 5px !important;
