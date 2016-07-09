@@ -45,7 +45,28 @@ function focusFollow() {
     }, 300); //跳转
 }
 
+//TODO 设置子级div的宽度，最佳解决方案：让它撑满父DIV
+function getContentWidth(compareWidth){
+    var screePix = new Array(800,1024,1280,1440,1600,1900,2560);
+    var screePencent = new Array('130%','128%','126%','124%','122%','120%','110%');
+    $.each(screePix, function(idx, obj) {
+        //console.log(idx,obj,compareWidth);
+        if(obj > compareWidth){
+            console.log('getwidth:',idx,obj,screePencent[idx]);
+            return screePencent[idx];
+        }
+    });
+}
+
 $(document).ready(function() {
+    $(window).resize(function(){
+        /*if (document.getElementById("cnblogs_post_body")){
+            var maxWidth = $(document.body).width();
+            console.log("window.resize:"+$('#main').width()+",bodyWidth:"+maxWidth);
+            $('#mainContent').css('width',maxWidth);
+        }*/
+    });
+
     $("<div id='toTop'  title='回顶部'></div>").appendTo($("body"));
     $("#toTop").bind("click", function() {
         $("body,html").animate({
@@ -70,14 +91,27 @@ $(document).ready(function() {
     //根据页面type调整scrollbar位置
    if (document.getElementById("cnblogs_post_body")){
        //TODO 能否获取css里的位置
-        $('#toTop').css('right','210px');
-        $('#toBottom').css('right','210px');
+        //$('#toTop').css('right','10px');
+        //$('#toBottom').css('right','10px');
         //TODO 修改浮动条的文字 您的推荐将鼓励我继续创作
         //$("#digg_tips").html("您的推荐将鼓励我继续创作");
         //document.getElementById('digg_tips').innerHTML = 'xx';
+
+        //博客内容全屏  NOTE 不用设置width，隐藏同级div，它就是全屏 v~v
+        var maxWidth = $(document.body).width();
+        console.log("mainWidth:"+$('#main').width()+",bodyWidth:"+maxWidth);
+        var contentWidth = $('#main').width() - 20;
+        //var contentPercent = getContentWidth();    
+        //$('#mainContent').css('width',contentPercent);
+        //$('#mainContent').css('position','relative');
+        $('#sideBar').css('display','none');
+
+
    }else{
-        $('#toTop').css('right','20px');
-        $('#toBottom').css('right','20px');
+        //$('#toTop').css('right','10px');
+        //$('#toBottom').css('right','10px');
+        //常显示右侧div
+        $('#sideBar').css('display','block');
    }
     //版权信息
     /*

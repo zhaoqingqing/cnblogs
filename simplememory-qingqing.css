@@ -243,7 +243,7 @@ a {
     word-break: break-all;
     float: left;
     margin-left: -22em;
-    width: 100%;
+    /*width: 100%;*/
 	font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
 	font-size: 14px;
 }
@@ -1310,6 +1310,7 @@ a {
         zoom: 0;
 		width:57px;
 		height:57px;
+        right:10px;
 		overflow:hidden;
 		position:fixed;
 		cursor:pointer;
@@ -1317,8 +1318,7 @@ a {
 
 	#toTop{
 	  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
-	  right:210px;
-      bottom:114px;
+      bottom:154px;
 	}
 
 	#toBottom{
@@ -1329,8 +1329,7 @@ a {
 		-o-transform:scaleY(-1);
 		transform:scaleY(-1);
 		filter:FlipV;/*IE*/
-		right:210px;
-        bottom:14px;
+        bottom:34px;
 	}
 
 /**标签样式**/
