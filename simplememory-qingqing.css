@@ -1318,7 +1318,7 @@ a {
 
 	#toTop{
 	  background:url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
-      bottom:154px;
+      bottom:20%;
 	}
 
 	#toBottom{
@@ -1329,7 +1329,7 @@ a {
 		-o-transform:scaleY(-1);
 		transform:scaleY(-1);
 		filter:FlipV;/*IE*/
-        bottom:34px;
+        bottom:5%;
 	}
 
 /**标签样式**/

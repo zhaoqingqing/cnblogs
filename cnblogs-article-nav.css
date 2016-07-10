@@ -7,7 +7,7 @@
 #sideToolbar {
 	display: block;
 	position: fixed;
-	top: 50px;/*太小或太低部在手机上体验不是很好*/
+	top: 18%;/*太小或太低部在手机上体验不是很好*/
 	right: 10px;
 	/*NOTE size和子节点保持大致 */
 	width: 320px;
@@ -147,7 +147,7 @@
 	width: 45px;
 	height: 45px;
 	right: 16px;
-	bottom: 100px;
+	bottom: 13.5%;
 	outline: 0;
 }
 #sideCatalogBtn:hover {

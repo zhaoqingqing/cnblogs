@@ -46,14 +46,20 @@ function focusFollow() {
 }
 
 //TODO 设置子级div的宽度，最佳解决方案：让它撑满父DIV
+var calcPencent = '110%';
 function getContentWidth(compareWidth){
-    var screePix = new Array(800,1024,1280,1440,1600,1900,2560);
-    var screePencent = new Array('130%','128%','126%','124%','122%','120%','110%');
+    var screePix = new Array(800,1024,1280,1440,1600,1920,2560);
+    var screePencent = new Array(1.3,1.28,1.26,1.24,1.22,1.2,1.1);
+    var isGetVal = false;
     $.each(screePix, function(idx, obj) {
-        //console.log(idx,obj,compareWidth);
-        if(obj > compareWidth){
-            console.log('getwidth:',idx,obj,screePencent[idx]);
-            return screePencent[idx];
+        //console.log(idx,parseInt(obj),parseInt(compareWidth));
+        if(parseInt(obj) >= parseInt(compareWidth) && !isGetVal){
+            var calcWidth = parseInt(screePencent[idx] * compareWidth);
+            var tmpPencent = (screePencent[idx] * 100);
+            calcPencent = (tmpPencent.toString()+"%");
+            console.log('calcwidth:',idx,obj,compareWidth,calcPencent,calcWidth);
+            isGetVal = true;
+            return calcPencent;
         }
     });
 }
@@ -88,38 +94,10 @@ $(document).ready(function() {
             console.log("page not article");
         }
     });
-    //根据页面type调整scrollbar位置
-   if (document.getElementById("cnblogs_post_body")){
-       //TODO 能否获取css里的位置
-        //$('#toTop').css('right','10px');
-        //$('#toBottom').css('right','10px');
-        //TODO 修改浮动条的文字 您的推荐将鼓励我继续创作
-        //$("#digg_tips").html("您的推荐将鼓励我继续创作");
-        //document.getElementById('digg_tips').innerHTML = 'xx';
 
-        //博客内容全屏  NOTE 不用设置width，隐藏同级div，它就是全屏 v~v
-        var maxWidth = $(document.body).width();
-        console.log("mainWidth:"+$('#main').width()+",bodyWidth:"+maxWidth);
-        var contentWidth = $('#main').width() - 20;
-        //var contentPercent = getContentWidth();    
-        //$('#mainContent').css('width',contentPercent);
-        //$('#mainContent').css('position','relative');
-        $('#sideBar').css('display','none');
+   
 
-
-   }else{
-        //$('#toTop').css('right','10px');
-        //$('#toBottom').css('right','10px');
-        //常显示右侧div
-        $('#sideBar').css('display','block');
-   }
     //版权信息
-    /*
-    $('#cnblogs_post_body pre').find('>code').parent().css({
-        'border': 'dashed 1px #aaa',
-        'border-left': 'solid 2px #6CE26C'
-    });
-    */
     var signatureHtml ="";
     signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a><br />';
     signatureHtml += '关于我：乐于学习未知技术和知识，擅长Unity3D，游戏开发，.NET等领域。<br />';
@@ -133,7 +111,7 @@ $(document).ready(function() {
     else {
         $("#cnblogs_post_body #MySignature").show().html(signatureHtml);
     }
-    //fix：把click函数写在Html代码里在渲染出的html莫名的多了个=
+    //fix：把click函数写在Html代码里在渲染之后莫名多了个'='
     $('#recommendme').on('click', function() {
         votePost(cb_entryId,"Digg")
         console.log("recommend success");
@@ -144,6 +122,8 @@ $(document).ready(function() {
         console.log("follow success");
         $("#signatureTips").html("谢谢您的关注！");
     });  
+    
+ 
 });
 
 
@@ -159,8 +139,31 @@ $("#div_digg").wait(function() {
     html += '</div>';
 
     $(html).appendTo('#div_digg');
+    console.log('wait digg');
 });
 
+$("#mainContent").wait(function() {
+    //根据页面type
+   if (document.getElementById("cnblogs_post_body")){
+        //博客内容全屏  NOTE 不用设置width，隐藏同级div，它就是全屏 v~v
+        $('#sideBar').css('width','0px');
+        $('#sideBar').css('display','none');
+
+        var maxWidth = $(document.body).width();
+        console.log("mainWidth:"+$('#main').width()+",bodyWidth:"+maxWidth);
+        var contentWidth = $('#main').width() - 20;
+        getContentWidth(maxWidth);    
+        $('#mainContent').css('width',calcPencent);
+        //$('#mainContent').css('position','relative');
+        console.log('contant fullscreen', calcPencent.toString(),$('#mainContent').width());
+   }else{
+        //常显示右侧div
+        $('#sideBar').css('display','block');
+        $('#mainContent').css('width','100%');
+        console.log('contant normalsize');
+   }
+});
+   
 /** 
  * js截取字符串，中英文都能用 
  * 如果给定的字符串大于指定长度，截取指定长度返回，否者返回源字符串。  
