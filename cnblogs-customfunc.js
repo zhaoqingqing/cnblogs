@@ -48,8 +48,9 @@ function focusFollow() {
 //TODO 设置子级div的宽度，最佳解决方案：让它撑满父DIV
 var calcPencent = '110%';
 function getContentWidth(compareWidth){
+    //在1920的分辨率中，foxmail订阅默认大小<1440
     var screePix = new Array(800,1024,1280,1440,1600,1920,2560);
-    var screePencent = new Array(1.3,1.28,1.26,1.24,1.22,1.2,1.1);
+    var screePencent = new Array(1.28,1.26,1.24,1.22,1.2,1.18,1.1);
     var isGetVal = false;
     $.each(screePix, function(idx, obj) {
         //console.log(idx,parseInt(obj),parseInt(compareWidth));
