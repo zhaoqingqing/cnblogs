@@ -898,18 +898,20 @@ a {
 .entrylistPosttitle {
     padding-left: 15px;
     margin-bottom: 10px;
-    border-left: 3px solid #21759b;
+    /*border-left: 3px solid #21759b;*/
+    border-left: 10px solid rgb(205, 73, 0);
     font-size: 20px;
     width: 100%;
 }
 
     .entrylistPosttitle a:link, .entrylistPosttitle a:visited, .entrylistPosttitle a:active {
-        color: #21759b;
+        /*color: #21759b;*/
+        color: white;
         transition: all 0.4s linear 0s;
     }
 
     .entrylistPosttitle a:hover {
-        margin-left: 30px;
+        margin-left: 30px;/*animation*/
         color: #0f3647;
         text-decoration: none;
     }
