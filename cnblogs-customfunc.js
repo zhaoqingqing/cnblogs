@@ -1,5 +1,5 @@
 /*
-功能：	为博客自定义功能，比如推荐此文，Scrollbar;新功能添加在此
+功能：	为博客自定义功能，比如推荐此文，Scrollbar;roadmap:新功能添加在此
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
@@ -58,7 +58,7 @@ function getContentWidth(compareWidth){
             var calcWidth = parseInt(screePencent[idx] * compareWidth);
             var tmpPencent = (screePencent[idx] * 100);
             calcPencent = (tmpPencent.toString()+"%");
-            console.log('calcwidth:',idx,obj,compareWidth,calcPencent,calcWidth);
+            console.log('use-width:',idx,obj,compareWidth,calcPencent,calcWidth);
             isGetVal = true;
             return calcPencent;
         }
@@ -146,7 +146,7 @@ $("#div_digg").wait(function() {
 $("#mainContent").wait(function() {
     //根据页面type
    if (document.getElementById("cnblogs_post_body")){
-        //博客内容全屏  NOTE 不用设置width，隐藏同级div，它就是全屏 v~v
+        //博客内容全屏  NOTE 在IE下不用设置width，隐藏同级div，它就是全屏 v~v，buf chrome并不是!
         $('#sideBar').css('width','0px');
         $('#sideBar').css('display','none');
 
@@ -156,7 +156,7 @@ $("#mainContent").wait(function() {
         getContentWidth(maxWidth);    
         $('#mainContent').css('width',calcPencent);
         //$('#mainContent').css('position','relative');
-        console.log('contant fullscreen', calcPencent.toString(),$('#mainContent').width());
+        console.log('contant fullscreen->', calcPencent.toString(),$('#mainContent').width());
    }else{
         //常显示右侧div
         $('#sideBar').css('display','block');
