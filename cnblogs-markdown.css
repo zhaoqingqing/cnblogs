@@ -27,11 +27,6 @@
   font-weight: bold;
 }
 
-.cnblogs-markdown h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 .cnblogs-markdown img {
   border: 0;
 }
@@ -255,7 +250,8 @@
 .cnblogs-markdown h6:hover .anchor .octicon-link {
   display: inline-block;
 }
-
+/*h标签的样式和simplememory主题保持一致*/
+/*
 .cnblogs-markdown h1 {
   padding-bottom: 0.3em;
   font-size: 2.25em !important;
@@ -282,7 +278,18 @@
   font-size: 1.5em!important;
   line-height: 1.43;
 }
+*/
 
+.cnblogs-markdown h1, .cnblogs-markdown h2 , .cnblogs-markdown h3 {
+  /*font-size: 2em;*/
+  margin-bottom: 5px;
+  padding-left:15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.cnblogs-markdown h1 .anchor, .cnblogs-markdown h2 .anchor {
+  line-height: 1;
+}
 .cnblogs-markdown h3 .anchor {
   line-height: 1.2;
 }
