@@ -25,6 +25,18 @@ a.ready(function() {
         q = true,
         r = true,
         cnblogs_post_body_flag = $('#' + cnblogs_post_body);
+   
+    //mobile detect
+    var md = new MobileDetect(window.navigator.userAgent);
+    if (md.mobile()) {
+        
+        //$('#mainContent').css('style','1');
+         console.log("mobile platform");
+         return;
+    }else{
+        console.log("not mobile platform");
+    }
+
     //只有文章页面才会生成    
     if (cnblogs_post_body_flag.length === 0) {
         return
@@ -102,14 +114,14 @@ a.ready(function() {
             scrollTop: 0
         }, 500)
     });
-    $sideToolbar = $('#' + sideNavBody);
-    a.on('scroll', function() {
-        var t = a.scrollTop();
+    //$sideToolbar = $('#' + sideNavBody);
+    //a.on('scroll', function() {
+      //  var t = a.scrollTop();
         //我要一直显示文章目录
         /* if (t > k) {
             $sideToolbar.css('display', 'block')
         } else {
             $sideToolbar.css('display', 'none')
         } */
-    })
+   // })
 });

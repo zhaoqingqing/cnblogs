@@ -58,7 +58,7 @@ function getContentWidth(compareWidth){
             var calcWidth = parseInt(screePencent[idx] * compareWidth);
             var tmpPencent = (screePencent[idx] * 100);
             calcPencent = (tmpPencent.toString()+"%");
-            console.log('use-width:',idx,obj,compareWidth,calcPencent,calcWidth);
+            console.log('arrary:',idx,obj,compareWidth,calcPencent,calcWidth);
             isGetVal = true;
             return calcPencent;
         }
@@ -96,8 +96,6 @@ $(document).ready(function() {
         }
     });
 
-   
-
     //版权信息
     var signatureHtml ="";
     signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a><br />';
@@ -123,8 +121,6 @@ $(document).ready(function() {
         console.log("follow success");
         $("#signatureTips").html("谢谢您的关注！");
     });  
-    
- 
 });
 
 
@@ -140,7 +136,7 @@ $("#div_digg").wait(function() {
     html += '</div>';
 
     $(html).appendTo('#div_digg');
-    console.log('wait digg');
+    //console.log('wait digg');
 });
 
 $("#mainContent").wait(function() {
@@ -151,17 +147,17 @@ $("#mainContent").wait(function() {
         $('#sideBar').css('display','none');
 
         var maxWidth = $(document.body).width();
-        console.log("mainWidth:"+$('#main').width()+",bodyWidth:"+maxWidth);
+        console.log("#main.Width:"+$('#main').width()+",bodyWidth:"+maxWidth);
         var contentWidth = $('#main').width() - 20;
         getContentWidth(maxWidth);    
         $('#mainContent').css('width',calcPencent);
         //$('#mainContent').css('position','relative');
-        console.log('contant fullscreen->', calcPencent.toString(),$('#mainContent').width());
+        console.log('this page fullscreen->', calcPencent.toString(),$('#mainContent').width()+"px");
    }else{
         //常显示右侧div
         $('#sideBar').css('display','block');
         $('#mainContent').css('width','100%');
-        console.log('contant normalsize');
+        console.log('this page normalsize');
    }
 });
    
