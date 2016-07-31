@@ -57,6 +57,6 @@ TODO：对博客的导航栏进行分类，比如增加主题性分类
 ## 开源项目
 
 - mobile-detect.min.js https://github.com/hgoebl/mobile-detect.js
-  ​DOC: https://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html
+  <br/>​DOC: https://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html
 
 - cnblogs-markdown-css  https://github.com/huizhong/cnblogs-markdown-css
