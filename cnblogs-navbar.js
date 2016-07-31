@@ -10,16 +10,16 @@ bug：  启动浏览的第一次打开cnblogs，样式没有加载出来，刷�
 $(function(){
 	$("a").remove("#MyLinks1_Admin");
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/">本站首页</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/537262.html">Unity项目日志</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/514068.html">Unity技巧&&经验</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/563344.html">uGUI/Unity2d</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835738.html">NGUI/UI组件</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/555471.html">Unity插件日志</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835025.html">VR/AR 日志</a></li>');
-	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/529305.html">Unity Editor日志</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/537262.html">Unity3D项目开发</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/514068.html">Unity3D技巧&&经验</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/563344.html">uGUI/Unity2D</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835738.html">NGUI/UI开发</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/555471.html">Unity3D 插件</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/835025.html">VR/AR 技术</a></li>');
+	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/529305.html">Unity3D Editor开发</a></li>');
 
 	//$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="http://www.cnblogs.com/zhaoqingqing/category/541042.html">我的随笔</a></li>');
-	//加载图片
+	//TODO 加载图片
 	/*
 	var ponum1 = $(".postTitle").length;
 	var ponum2 = $(".entrylistPosttitle").length;
