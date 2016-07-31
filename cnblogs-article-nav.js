@@ -31,10 +31,10 @@ a.ready(function() {
     if (md.mobile()) {
         
         //$('#mainContent').css('style','1');
-         console.log("mobile platform");
+         console.log("you platform is mobile");
          return;
     }else{
-        console.log("not mobile platform");
+        console.log("you platform not mobile ");
     }
 
     //只有文章页面才会生成    

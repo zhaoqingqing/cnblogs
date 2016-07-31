@@ -73,29 +73,30 @@ $(document).ready(function() {
             $('#mainContent').css('width',maxWidth);
         }*/
     });
-
-    $("<div id='toTop'  title='回顶部'></div>").appendTo($("body"));
-    $("#toTop").bind("click", function() {
-        $("body,html").animate({
-            scrollTop: '0px'
-        }, 200);
-    });
-    $("<div id='toBottom' title='到底部'></div>").appendTo($("body"));
-    $("#toBottom").bind("click", function() {
-        //文章页下拉到评论区，其它页面拉到顶部
-        if (document.getElementById("blog_post_info_block")) {
+var md = new MobileDetect(window.navigator.userAgent);
+ if (md.mobile()){}else {
+        $("<div id='toTop'  title='回顶部'></div>").appendTo($("body"));
+        $("#toTop").bind("click", function() {
             $("body,html").animate({
-                scrollTop: $('#blog_post_info_block').offset().top
-            }, 150);
-            console.log("page is article");
-        } else {
-            $("body,html").animate({
-                scrollTop: $('#footer').offset().top
-            }, 150);
-            console.log("page not article");
-        }
-    });
-
+                scrollTop: '0px'
+            }, 200);
+        });
+        $("<div id='toBottom' title='到底部'></div>").appendTo($("body"));
+        $("#toBottom").bind("click", function() {
+            //文章页下拉到评论区，其它页面拉到顶部
+            if (document.getElementById("blog_post_info_block")) {
+                $("body,html").animate({
+                    scrollTop: $('#blog_post_info_block').offset().top
+                }, 150);
+                console.log("page is article");
+            } else {
+                $("body,html").animate({
+                    scrollTop: $('#footer').offset().top
+                }, 150);
+                console.log("page not article");
+            }
+        });
+    }
     //版权信息
     var signatureHtml ="";
     signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a><br />';
