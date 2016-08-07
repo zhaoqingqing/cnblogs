@@ -47,14 +47,27 @@
 
 并结合ggice的**gsimple**主题进行部分修改，可惜在作者的github上已找不到此主题了： https://github.com/GGICE
 
-## TODO/Roadmap
+## TODO
 
 - [x] 区别PC和Mobile浏览器，调整对应的样式 
 
-  PS：博客园的模版大多未兼容移动端，此调整只是简单的修改了一些参数
+​        *PS：博客园的模版大多未兼容移动端，此调整只是简单的修改了一些参数*
 
-- [ ] Mobile上处理自动拉伸的size
+- [ ] Mobile上处理自动拉伸的size，目前是手动双击屏幕
+
 - [ ] 有更好的替代品 mobile detect ?
+
+- [ ] 博客园的Markdown中**代码显示行号**
+
+- [ ] MD文章中的图片添加水印？
+
+      ​
+
+## ROADMAP
+
+- [ ] 方案一：自动备份个人博客到git，并调整博客园样式更兼容Mobile?
+- [ ] 方案二：搭建新的blog，使用github pages 托管在git，搬迁cnblogs文章？
+- [ ] 方案三：cnblogs + github blog 同时维护？
 
 
 
