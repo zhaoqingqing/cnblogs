@@ -168,3 +168,28 @@
 #sideToolbar-up:hover {
 	background: url("http://files.cnblogs.com/files/zhaoqingqing/sideToolbar.gif") no-repeat scroll -74px -62px transparent
 }
+
+/*====== toc =======*/
+.cnblogs_toc {
+   float:left; 
+   min-width:200px;
+   padding: 4px 10px;
+   font-size: 12px; 
+   background-color: #eee;
+   border: 1px solid #ccc;
+}
+ 
+.cnblogs_toc a {
+   color: #369;
+   border-bottom: 0px;
+}
+
+.cnblogs_toc ol {
+  
+   margin: 5px 14px 5px;
+   line-height: 160%;
+}
+
+.cnblogs_toc li {
+   list-style: decimal;
+}

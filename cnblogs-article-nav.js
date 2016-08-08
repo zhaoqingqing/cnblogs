@@ -5,8 +5,8 @@
 	  http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
-var a = $(document);
-a.ready(function() {
+//cnblogs生成右侧目录
+$(document).ready(function() {
     var b = $('body'),
         cnblogs_post_body = 'cnblogs_post_body',
         sideNavBody = 'sideToolbar',
@@ -125,3 +125,73 @@ a.ready(function() {
         } */
    // })
 });
+
+// 在文章的内容页生成TOC
+$(document).ready(function() {
+    buildTocTable();
+    });
+
+function buildTocTable() {
+    var hs = $('#cnblogs_post_body').find('h1,h2,h3,h4,h5,h6');
+    if (hs.length < 2)
+        return;
+    var s = '';
+    s += '<div style="clear:both"></div>';
+    s += '<div class="cnblogs_toc">';
+    s += '<p style="text-align:right;margin:0;"><span style="float:left; text-indent:0;">文章目录<a href="#" title="系统根据文章中H1到H6标签自动生成文章目录">(?)</a></span><a href="#" onclick="javascript:return openct(this);" title="展开">[+]</a></p>';
+    //.cnblogs_toc ol 控制默认展开或关闭
+    s += '<ol style="display:none;margin-left:14px;padding-left:14px;line-height:160%;">';
+    var old_h = 0, ol_cnt = 0;
+    for (var i = 0; i < hs.length; i++) {
+        var h = parseInt(hs[i].tagName.substr(1), 10);
+        if (!old_h)
+            old_h = h;
+        if (h > old_h) {
+            s += '<ol>';
+            ol_cnt++;
+        }
+        else if (h < old_h && ol_cnt > 0) {
+            s += '</ol>';
+            ol_cnt--;
+        }
+        if (h == 1) {
+            while (ol_cnt > 0) {
+                s += '</ol>';
+                ol_cnt--;
+            }
+        }
+        old_h = h;
+        var tit = hs.eq(i).text().replace(/^\d+[.、\s]+/g, '');
+        tit = tit.replace(/[^a-zA-Z0-9_\-\s\u4e00-\u9fa5]+/g, '');
+
+        if (tit.length < 100) {
+            s += '<li><a href="#t' + i + '">' + tit + '</a></li>';
+            hs.eq(i).html('<a name="t' + i + '"></a>' + hs.eq(i).html());
+        }
+    }
+    while (ol_cnt > 0) {
+        s += '</ol>';
+        ol_cnt--;
+    }
+    s += '</ol></div>';
+    s += '<div style="clear:both"><br></div>';
+    $(s).insertBefore($('#cnblogs_post_body'));
+
+    //mobile detect
+    var md = new MobileDetect(window.navigator.userAgent);
+    if (md.mobile()) {
+        $('.cnblogs_toc ol').css('display','none');
+    }else{
+       $('.cnblogs_toc ol').css('display','block');
+    }
+}
+
+function openct(e) {
+    if (e.innerHTML == '[+]') {
+        $(e).attr('title', '收起').html('[-]').parent().next().show();
+    } else {
+        $(e).attr('title', '展开').html('[+]').parent().next().hide();
+    }
+    e.blur();
+    return false;
+}
