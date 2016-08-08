@@ -37,6 +37,12 @@
 ### 定制博客中Markdown文章的渲染样式
 对markdown格式文章的渲染美化
 
+### TOC
+
+pc浏览本博客默认展开TOC，mobile浏览默认收缩。
+
+参考：http://www.cnblogs.com/Quincy/p/4832805.html
+
 ### F12有彩蛋
 
 使用chrome，firefox等现代化浏览器的同学，可以F12查看控制台的log。
@@ -66,8 +72,16 @@
 ## ROADMAP
 
 - [ ] 方案一：自动备份个人博客到git，并调整博客园样式更兼容Mobile?
+
 - [ ] 方案二：搭建新的blog，使用github pages 托管在git，搬迁cnblogs文章？
+
+      已使用hexo +gitpages搭建：https://zhaoqingqing.github.io/
+
 - [ ] 方案三：cnblogs + github blog 同时维护？
+
+- [ ] 引入FontAwesome 图标？
+
+- [ ] 重构公告栏样式？
 
 
 
