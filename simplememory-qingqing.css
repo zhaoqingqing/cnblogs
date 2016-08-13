@@ -1267,13 +1267,18 @@ a {
 
 #cnblogs_post_body h3{
   color:#6FA833;
-  border-left: 13px solid #6FA833;
-  padding:5px;
+  border-left: 18px solid #6FA833;
+  padding:5px 8px;
   background-color:#f5f5f5;
 }
 #cnblogs_post_body h4{
-  color:#cd4900;
-  border-bottom:1px solid #cd4900;
+  color:#6FA833;
+  font-size: 14px;
+  font-weight: normal;
+  text-indent: 4px;
+  padding: 5px;
+  background-color:#f5f5f5;
+  border-left: 6px solid #6FA833;
 }
 
 /*底部说明:之前用的部分插入代码插件也是pre，所以此css可能会破坏代码高亮*/
