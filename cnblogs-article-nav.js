@@ -5,7 +5,7 @@
 	  http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
-//cnblogs生成右侧目录
+//cnblogs生成右侧目录 start
 $(document).ready(function() {
     var b = $('body'),
         cnblogs_post_body = 'cnblogs_post_body',
@@ -125,8 +125,9 @@ $(document).ready(function() {
         } */
    // })
 });
+//cnblogs生成右侧目录 end
 
-// 在文章的内容页生成TOC
+// 在文章正文顶部生成TOC start
 $(document).ready(function() {
     buildTocTable();
     });
@@ -138,7 +139,7 @@ function buildTocTable() {
     var s = '';
     s += '<div style="clear:both"></div>';
     s += '<div class="cnblogs_toc">';
-    s += '<p style="text-align:right;margin:0;"><span style="float:left; text-indent:0;">文章目录<a href="#" title="系统根据文章中H1到H6标签自动生成文章目录">(?)</a></span><a href="#" onclick="javascript:return openct(this);" title="展开">[+]</a></p>';
+    s += '<p style="text-align:left;margin:0;"><span style="float:left; text-indent:0;"><a id="TocTitle" href="#" onclick="javascript:return OnTitleShowToc(this);" title="系统根据文章中H1到H6标签自动生成文章目录">文章目录[点击展开](?)</a></span><a id="TocTitleSymbol" href="#" onclick="javascript:return OnTitleSymbolShowToc(this);" title="展开">[+]</a></p>';
     //.cnblogs_toc ol 控制默认展开或关闭
     s += '<ol style="display:none;margin-left:14px;padding-left:14px;line-height:160%;">';
     var old_h = 0, ol_cnt = 0;
@@ -176,22 +177,51 @@ function buildTocTable() {
     s += '</ol></div>';
     s += '<div style="clear:both"><br></div>';
     $(s).insertBefore($('#cnblogs_post_body'));
-
+    //note 若toc过长，影响阅读体验，默认收起
     //mobile detect
-    var md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile()) {
-        $('.cnblogs_toc ol').css('display','none');
+    // var md = new MobileDetect(window.navigator.userAgent);
+    // if (md.mobile()) {
+    //     $('.cnblogs_toc ol').css('display','none');
+    // }else{
+    //    $('.cnblogs_toc ol').css('display','block');
+    // }
+}
+
+var isOpendToc = false;
+
+function UpdateTocTitle(){
+    if(isOpendToc){
+        $("#TocTitleSymbol").attr('title', '收起').html('[-]');
+        $("#TocTitle").html('文章目录[点击收起](?)');
     }else{
-       $('.cnblogs_toc ol').css('display','block');
+        $("#TocTitleSymbol").attr('title', '展开').html('[+]');
+        $("#TocTitle").html('文章目录[点击展开](?)');
     }
 }
 
-function openct(e) {
-    if (e.innerHTML == '[+]') {
-        $(e).attr('title', '收起').html('[-]').parent().next().show();
+function OnTitleShowToc(e) {
+    if (!isOpendToc) {
+        $(e).parent().parent().next().show();
+        isOpendToc = true;
     } else {
-        $(e).attr('title', '展开').html('[+]').parent().next().hide();
+        $(e).parent().parent().next().hide();
+        isOpendToc = false;
     }
+    UpdateTocTitle();
     e.blur();
     return false;
 }
+
+function OnTitleSymbolShowToc(e) {
+    if (!isOpendToc) {
+        $("#TocTitleSymbol").parent().next().show();
+        isOpendToc = true;
+    } else {
+        $("#TocTitleSymbol").parent().next().hide();
+        isOpendToc = false;
+    }
+    UpdateTocTitle();
+    e.blur();
+    return false;
+}
+// 在文章正文顶部生成TOC end
