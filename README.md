@@ -37,7 +37,7 @@
 ### 定制博客中Markdown文章的渲染样式
 对markdown格式文章的渲染美化
 
-### TOC
+### TOC(文章大纲/目录)
 
 pc浏览本博客默认展开TOC，mobile浏览默认收缩。
 
@@ -47,11 +47,41 @@ pc浏览本博客默认展开TOC，mobile浏览默认收缩。
 
 使用chrome，firefox等现代化浏览器的同学，可以F12查看控制台的log。
 
+## Markdown图片
+
+### 七牛图床服务
+
+七牛图片水印：[http://developer.qiniu.com/code/v6/api/kodo-api/image/watermark.html](http://developer.qiniu.com/code/v6/api/kodo-api/image/watermark.html)
+
+白色水印
+
+http://obupeer78.bkt.clouddn.com/clientgame-refresh-principle.png?watermark/2/text/aHR0cDovL3d3dy5jbmJsb2dzLmNvbS96aGFvcWluZ3Fpbmcv/font/5b6u6L2v6ZuF6buR/fontsize/380/fill/I0VFRUVFRQ==/dissolve/100/gravity/SouthEast/dx/6/dy/4
+
+ghpages + hexo + 七牛示例：[https://github.com/tiann/markdown-img-upload](https://github.com/tiann/markdown-img-upload)
+
+hexo + 七牛插件
+
+https://www.npmjs.com/package/hexo-qiniu-images
+
+https://www.npmjs.com/package/hexo-qiniu
+
+https://github.com/tiann/markdown-img-upload
+
+扩展资料
+
+七牛融合cdn 使用指南 https://support.qiniu.com/hc/kb/article/142568/
+
+使用七牛在 Hexo 文档中嵌入图片 http://linusling.com/2016/03/04/images-in-hexo-using-qiniu/
+
+推荐一个稳定而强大的图床: [http://www.jianshu.com/p/5f0d5451ca01](http://www.jianshu.com/p/5f0d5451ca01)
+
+七牛云使用心得: http://www.izhuyue.com/1528.html
+
 ## 主题灵感
 
-此主题基于博客园的 **simplememory**: http://www.cnblogs.com/SkinUser.aspx?SkinName=SimpleMemory
+此主题基于博客园的 **simplememory**: [http://www.cnblogs.com/SkinUser.aspx?SkinName=SimpleMemory](http://www.cnblogs.com/SkinUser.aspx?SkinName=SimpleMemory)
 
-并结合ggice的**gsimple**主题进行部分修改，可惜在作者的github上已找不到此主题了： https://github.com/GGICE
+并结合ggice的**gsimple**主题进行部分修改，可惜在作者的github上已找不到此主题了： [https://github.com/GGICE](https://github.com/GGICE)
 
 ## TODO
 
