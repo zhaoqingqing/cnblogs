@@ -1,8 +1,9 @@
-## project说明
-博客园功能定制 for : [http://www.cnblogs.com/zhaoqingqing/](http://www.cnblogs.com/zhaoqingqing/)
+## 仓库说明
+博客园功能定制 for : [http://www.cnblogs.com/zhaoqingqing/](http://www.cnblogs.com/zhaoqingqing/)  
 
-欢迎大家关注我的博客：[http://www.cnblogs.com/zhaoqingqing/](http://www.cnblogs.com/zhaoqingqing/)
-博客内容：
+你也可以把此样式应用于自己的博客园样式，使用指南见下文的 **cnblogs后台设置**
+
+### 博客内容
 
 - unity3d引擎技术，游戏开发的知识积累
 - 工作点滴 + 项目沉淀 + 自己学习 的总结
@@ -10,7 +11,7 @@
 - 数据结构，算法，设计模式，编程领悟
 
 ## 建议浏览器
-建议读者使用现代化的浏览器，比如`chrome`，`firefox`，`opera`，`ie11及以上版本`，`edge`
+建议读者使用现代化的浏览器套用或浏览博客，比如`chrome`，`firefox`，`opera`，`ie11及以上版本`，`edge`
 
 ## cnblogs后台设置
 1. 在博客园后台上传文件，包括css，js，图片资源
