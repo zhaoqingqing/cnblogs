@@ -70,8 +70,8 @@ try {
     if (window.console && window.console.log) {
         console.log("\n")
         console.log("一位新人，要经历怎样的成长，才能站在技术之巅？\n想探寻这里面蕴含的秘密？赶快把我的博客加入收藏，添加到书签，你，可以影响世界。\n");
-        console.log("如果你想和我取得联系，你可以发送邮件至 %c 569032731@qq.com", "color:red");
-        console.log("IM联系方式： %c QQ/Wechat: 569032731（ 请附上验证信息）", "color:red");
+        console.log("如果你想和我取得联系，你可以发送邮件至 %c 569032731@qq.com", "color:blue");
+        console.log("IM联系方式： %c QQ/Wechat: 569032731（ 请附上验证信息）", "color:blue");
         console.log("\n")
         console.log("博客中有关的示例代码：%c https://github.com/zhaoqingqing/blog_samplecode", "color:green")
         console.log("博客的主题的源码托管：%c https://github.com/zhaoqingqing/cnblogs", "color:green")
