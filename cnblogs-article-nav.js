@@ -26,15 +26,15 @@ $(document).ready(function() {
         r = true,
         cnblogs_post_body_flag = $('#' + cnblogs_post_body);
    
-    //mobile detect
+    //mobile detect 如果是移动平台，不显示侧边栏
     var md = new MobileDetect(window.navigator.userAgent);
     if (md.mobile()) {
         
         //$('#mainContent').css('style','1');
-         console.log("you platform is mobile");
+        //  console.log("you platform is mobile");
          return;
     }else{
-        console.log("you platform not mobile ");
+        //console.log("you platform not mobile ");
     }
 
     //只有文章页面才会生成    
@@ -127,7 +127,7 @@ $(document).ready(function() {
 });
 //cnblogs生成右侧目录 end
 
-// 在文章正文顶部生成TOC start
+//在文章正文顶部生成TOC start
 $(document).ready(function() {
     buildTocTable();
     });

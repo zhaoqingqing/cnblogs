@@ -1,5 +1,5 @@
 ﻿/**
-功能：	博客园自动生成的目录，样式表
+功能：	为博客园自动生成的目录，样式表
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
@@ -9,7 +9,7 @@
 	position: fixed;
 	top: 18%;/*太小或太低部在手机上体验不是很好*/
 	right: 10px;
-	/*NOTE size和子节点保持大致 */
+	/*NOTE size和子节点保持一致 */
 	width: 320px;
 	height: 500px
 }

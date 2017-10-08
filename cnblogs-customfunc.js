@@ -120,6 +120,7 @@ var md = new MobileDetect(window.navigator.userAgent);
     signatureHtml += '本文版权归作者和博客园共有欢迎转载，转载之后请务必在文章明显位置标出原文链接和作者，谢谢。<br />';
     signatureHtml += '如果本文对您有帮助，请点击<a id="recommendme",href="javascript:void(0);">【推荐】</a>您的赞赏将鼓励我继续创作！想跟我一起进步么？那就<a id="followme" href="javascript:void(0);">【关注】</a>我吧。';
     signatureHtml += '<div id="signatureTips"></div>';
+    //BUG 在360极速浏览器8.7(chrome50)下，偶现签名栏无法显示
     if ($("#cnblogs_post_body").next().attr("id") == "MySignature") {
         $("#cnblogs_post_body #MySignature").hide();
         $("#cnblogs_post_body").next().show().html(signatureHtml);
@@ -157,9 +158,10 @@ $("#div_digg").wait(function() {
 });
 
 $("#mainContent").wait(function() {
-    //根据页面type
+   /* //列表页:非全屏 显示侧边内容; 正文页:全屏隐藏侧边内容
    if (document.getElementById("cnblogs_post_body")){
-        //博客内容全屏  NOTE 在IE下不用设置width，隐藏同级div，它就是全屏 v~v，buf chrome并不是!
+        //博客内容页面全屏  
+        //NOTE 在IE下不用设置width，隐藏同级div，它就是全屏 v~v，but chrome并不是!
         $('#sideBar').css('width','0px');
         $('#sideBar').css('display','none');
 
@@ -175,7 +177,9 @@ $("#mainContent").wait(function() {
         $('#sideBar').css('display','block');
         $('#mainContent').css('width','100%');
         console.log('this page normalsize');
-   }
+   }*/
+   $('#sideBar').css('display','block');
+   $('#mainContent').css('width','100%');
 });
    
 /** 
