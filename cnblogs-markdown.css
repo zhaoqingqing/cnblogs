@@ -372,11 +372,12 @@
   padding: 0 16px;
   margin-bottom: 16px;
 }
-
+/*引用样式*/
 .cnblogs-markdown blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-left: 10px solid #D6DBDF;
 }
 
 .cnblogs-markdown blockquote>:first-child {
@@ -418,7 +419,7 @@
   max-width: 100%;
   box-sizing: border-box;
 }
-
+/*代码样式去掉边框*/
 .cnblogs-markdown code {
   padding: 0;
   padding-top: 0.2em;
@@ -427,6 +428,8 @@
   font-size: 85%;
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
+  border: none !important;
+  display: inline-block;
 }
 
 .cnblogs-markdown code:before,
@@ -626,6 +629,7 @@
   border-bottom-color: #bbb;
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb;
+  padding-top: 20px;
 }
 
 .cnblogs-markdown .task-list-item {

@@ -1,7 +1,10 @@
-/*
-功能：	为博客自定义功能，比如推荐此文，Scrollbar;roadmap:新功能添加在此
+/**
+功能：	为博客自定义功能，比如推荐此文，Scrollbar;
+TODO：  新的自定义功能写在此文件
 参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
+        文章顶部添加版权信息：https://www.cnblogs.com/gzdaijie/p/5187171.html
+        TODO markdown代码显示行号：https://blog.bluerain.io/p/markdown-code-block-line-number.html
 */
 
 jQuery.fn.wait = function(func, times, interval) {
@@ -80,6 +83,7 @@ try {
     } catch(e) {}
 }
 
+//程序执行入口，当文档加载完成
 $(document).ready(function() {
     $(window).resize(function(){
         /*if (document.getElementById("cnblogs_post_body")){
@@ -89,7 +93,7 @@ $(document).ready(function() {
         }*/
     });
 var md = new MobileDetect(window.navigator.userAgent);
- if (md.mobile()){}else {
+ if (md.mobile()== false || md.mobile() == null){
         consoleInfo();
         $("<div id='toTop'  title='回顶部'></div>").appendTo($("body"));
         $("#toTop").bind("click", function() {
@@ -131,14 +135,16 @@ var md = new MobileDetect(window.navigator.userAgent);
     //fix：把click函数写在Html代码里在渲染之后莫名多了个'='
     $('#recommendme').on('click', function() {
         votePost(cb_entryId,"Digg")
-        console.log("recommend success");
+        // console.log("recommend success");
         $("#signatureTips").html("感谢您的推荐！");
     });
     $('#followme').on('click', function() {
         cnblogs.UserManager.FollowBlogger("a7e65336-5c2c-e111-b988-842b2b196315");
-        console.log("follow success");
+        // console.log("follow success");
         $("#signatureTips").html("谢谢您的关注！");
-    });  
+    });
+    setCodeRow();
+    setCopyright();
 });
 
 
@@ -181,7 +187,44 @@ $("#mainContent").wait(function() {
    $('#sideBar').css('display','block');
    $('#mainContent').css('width','100%');
 });
-   
+
+//===================参考：https://www.cnblogs.com/gzdaijie/p/5187171.html
+function setCopyright() {
+    //设置版权信息，转载出处自动根据页面url生成，不需要加线(hr)
+    var info_str = '<p>作者：<a target="_blank">@qingqing-zhao</a><br>'+
+        '本文为作者原创，转载请注明出处：<a class="uri"></a></p>',
+        info = $(info_str),
+        info_a = info.find("a"),
+        url = window.location.href;
+    $(info_a[0]).attr("href","https://www.cnblogs.com/zhaoqingqing/");
+    $(info_a[1]).attr("href",url).text(url);
+    $("#cnblogs_post_body").prepend(info);
+}
+function setCodeRow(){
+    // 代码行号显示
+    var pre = $("pre.hljs"); //选中需要更改的部分
+    if(pre && pre.length){
+        pre.each(function() {
+            var item = $(this);
+            var lang = item.attr("class").split(" ")[1]; //判断高亮的语言
+            item.html(item.html().replace(/<[^>]+>/g,"")); //将<pre>标签中的html标签去掉
+            item.removeClass().addClass("brush: " + lang +";"); //根据语言添加笔刷
+            if(SyntaxHighlighter!=null) {
+                SyntaxHighlighter.all();
+            }else{
+                console.log("SyntaxHighlighter 插件找不到")
+            }
+        })
+    }
+}
+//并不是所有的链接都需要在新窗口打开，比如目录锚点反而有影响
+function setAtarget() {
+    // 博客内的链接在新窗口打开
+    $("#cnblogs_post_body a").each(function(){
+        this.target = "_blank";
+    })
+}
+//===================参考end===================
 /** 
  * js截取字符串，中英文都能用 
  * 如果给定的字符串大于指定长度，截取指定长度返回，否者返回源字符串。  
