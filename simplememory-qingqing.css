@@ -1538,12 +1538,12 @@ a:active {
 }
 
 #toTop {
-    background: url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
+    background: url(https://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
     bottom: 20%;
 }
 
 #toBottom {
-    background: url(http://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
+    background: url(https://files.cnblogs.com/files/zhaoqingqing/o_o_toTop.gif) no-repeat -70px top;
     /*图片水平翻转*/
     -moz-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
