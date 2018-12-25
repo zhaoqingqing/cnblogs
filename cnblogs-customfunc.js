@@ -1,8 +1,8 @@
 /**
 功能：	为博客自定义功能，比如推荐此文，Scrollbar;
 TODO：  新的自定义功能写在此文件
-参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
-		http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
+参考：	https://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
+		https://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
         文章顶部添加版权信息：https://www.cnblogs.com/gzdaijie/p/5187171.html
         TODO markdown代码显示行号：https://blog.bluerain.io/p/markdown-code-block-line-number.html
 */
@@ -119,7 +119,7 @@ var md = new MobileDetect(window.navigator.userAgent);
     }
     //版权信息
     var signatureHtml ="";
-    signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="http://www.cnblogs.com/zhaoqingqing/">http://www.cnblogs.com/zhaoqingqing/</a><br />';
+    signatureHtml +=  '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="https://www.cnblogs.com/zhaoqingqing/">https://www.cnblogs.com/zhaoqingqing/</a><br />';
     signatureHtml += '关于我：乐于学习未知技术和知识，擅长Unity3D，游戏开发，.NET等领域。<br />';
     signatureHtml += '本文版权归作者和博客园共有欢迎转载，转载之后请务必在文章明显位置标出原文链接和作者，谢谢。<br />';
     signatureHtml += '如果本文对您有帮助，请点击<a id="recommendme",href="javascript:void(0);">【推荐】</a>您的赞赏将鼓励我继续创作！想跟我一起进步么？那就<a id="followme" href="javascript:void(0);">【关注】</a>我吧。';

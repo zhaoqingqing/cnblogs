@@ -1,8 +1,8 @@
 ﻿/*
 功能：	自动为博客园文章生成目录
 原理：	抓取页面中的h1,h2,h3，生成<li>
-参考：	http://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
-	  http://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
+参考：	https://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
+	  https://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
 
 //cnblogs生成右侧目录 start
