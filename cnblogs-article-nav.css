@@ -7,11 +7,11 @@
 #sideToolbar {
 	display: block;
 	position: fixed;
-	top: 18%;/*太小或太低部在手机上体验不是很好*/
+	bottom: 26%;/*太小或太低部在手机上体验不是很好*/
 	right: 10px;
 	/*NOTE size和子节点保持一致 */
 	width: 320px;
-	height: 500px
+	height: 400px
 }
 #sideCatalog{
 	background-color:#fff;
@@ -31,7 +31,7 @@
 	border-right: 1px solid #eaeaea;
 	border-style: none solid;
 	border-width: 0 1px;
-	height: 480px;
+	height: 380px;
 	left: 5px;
 	position: absolute;
 	top: 0;
@@ -39,10 +39,10 @@
 }
 /*目录形成的范围,去掉滚动条，自动展开*/ 
 #sideCatalog-catalog {
-	height: 460px;/*文章目录的高度*/
+	height: 360px;/*文章目录的高度*/
 	padding-top: 18px;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding-left: 23px;
 	position: relative
 }

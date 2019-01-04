@@ -8,7 +8,7 @@ bug：  启动浏览的第一次打开cnblogs，样式没有加载出来，刷�
 
 //<script type="text/javascript">
 $(function(){
-	$("a").remove("#MyLinks1_Admin");
+	$("a").remove("#blog_nav_admin");
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="https://www.cnblogs.com/zhaoqingqing/">本站首页</a></li>');
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="https://www.cnblogs.com/zhaoqingqing/category/537262.html">Unity3D项目开发</a></li>');
 	$("#navList").append('<li><a id="liuyan" class="menu" rel="nofollow" href="https://www.cnblogs.com/zhaoqingqing/category/514068.html">Unity3D技巧&&经验</a></li>');
