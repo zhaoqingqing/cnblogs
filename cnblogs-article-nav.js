@@ -156,9 +156,9 @@ function buildTocTable() {
             <span style='float:left; text-indent:0;'>\
                 <a id='TocTitle' href='#' onclick='javascript:return OnTitleShowToc(this);' title='系统根据文章中H1到H6标签自动生成文章目录'>文章目录[点击展开](?)</a>\
             </span>\
-            <a id='TocTitleSymbol' href='#' onclick='javascript:return OnTitleSymbolShowToc(this);' title='展开'></a>\
-        </p>'\
-        <ol style='display:none;margin-left:14px;padding-left:14px;line-height:160%;>";
+            <a id='TocTitleSymbol' href='#' onclick='javascript:return OnTitleSymbolShowToc(this);' title='展开'>[+]</a>\
+        </p>\
+        <ol style='display:none;margin-left:14px;padding-left:14px;line-height:160%;'>";
 
     var old_h = 0, ol_cnt = 0;
     for (var i = 0; i < hArray.length; i++) {
@@ -193,13 +193,11 @@ function buildTocTable() {
         ol_cnt--;
     }
     htmlCode += '</ol></div>';
-    htmlCode += '<div style="clear:both"><br></div>';
+    htmlCode += '<div style="clear:both"><br /></div>';
     $(htmlCode).insertBefore($('#cnblogs_post_body'));
     //体验优化：如果目录数目过多则自动关闭，否则展开，利于阅读大纲
-    if (hArray.length > autoOpenNum) {
-        $('.cnblogs_toc ol').css('display', 'none');
-    } else {
-        $('.cnblogs_toc ol').css('display', 'block');
+    if (hArray.length <= autoOpenNum) {
+        $("#TocTitle").click();
     }
 }
 
