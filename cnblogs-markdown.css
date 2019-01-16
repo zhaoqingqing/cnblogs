@@ -375,9 +375,9 @@
 /*引用样式*/
 .cnblogs-markdown blockquote {
   color: #333;
-  padding: 10px 15px;
+  padding: 2px 15px !important;
   border: none;
-  border-left: 10px solid #D6DBDF;
+  border-left: 10px solid #D6DBDF !important;
 }
 
 .cnblogs-markdown blockquote>:first-child {
