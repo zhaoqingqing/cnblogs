@@ -4,10 +4,14 @@
 参考：	https://www.cnblogs.com/marvin/p/ExtendWizNoteAutoNnavigation.html
 	  https://www.cnblogs.com/asxinyu/p/Bolg_Category_For_BlogBeauty.html
 */
+$(document).ready(function() {
+    buildCatlog();
+    buildTocTable();
+    });
 
 //cnblogs生成右侧目录 start
-$(document).ready(function() {
-    var b = $('body'),
+function buildCatlog() { 
+    var body = $('body'),
         cnblogs_post_body = 'cnblogs_post_body',
         sideNavBody = 'sideToolbar',
         sideCatalog = 'sideCatalog',
@@ -15,9 +19,21 @@ $(document).ready(function() {
         sideCatalogCtrl = 'sideCatalogBtn',
         h = 'sideToolbar-up',
         //默认显示文章目录
-        navcontaint = '<div id="sideToolbar">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\</div>\<a href="javascript:void(0);" title="[隐藏/显示]目录" id="sideCatalogBtn" class="sideCatalogBtnDisable"></a>',
+        //navcontaint = '<div id="sideToolbar">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:300px;zoom:1">\</ul>\</div>\</div>\</div>\<a href="javascript:void(0);" title="[隐藏/显示]目录" id="sideCatalogBtn" class="sideCatalogBtnDisable"></a>',
+        navcontaint = "<div id='sideToolbar'>\
+        <div class='sideCatalogBg' id='sideCatalog'>\
+            <div id='sideCatalog-sidebar'>\
+                <div class='sideCatalog-sidebar-top'></div>\
+                <div class='sideCatalog-sidebar-bottom'></div>\
+            </div>\
+            <div id='sideCatalog-catalog'>\
+                <ul class='nav' style='width:300px;zoom:1'>\</ul>\
+            </div>\
+        </div>\
+    </div>\
+    <a href='javascript:void(0);' title='[隐藏/显示]目录' id='sideCatalogBtn' class='sideCatalogBtnDisable'></a>",
         j = '',
-        k = 200,
+        scrollDown = 500,
         l = 0,
         m = 0,
         n = 0,
@@ -41,7 +57,7 @@ $(document).ready(function() {
     if (cnblogs_post_body_flag.length === 0) {
         return
     };
-    b.append(navcontaint);
+    body.append(navcontaint);
     o = cnblogs_post_body_flag.find(':header');
     if (o.length > p) {
         r = false;
@@ -93,18 +109,18 @@ $(document).ready(function() {
         }
     });
     $('#' + f + '>ul').html(j);
-    b.data('spy', 'scroll');
-    b.data('target', '.sideCatalogBg');
+    body.data('spy', 'scroll');
+    body.data('target', '.sideCatalogBg');
     $('body').scrollspy({
         target: '.sideCatalogBg'
     });
     $sideCatelog = $('#' + sideCatalog);
     $('#' + sideCatalogCtrl).on('click', function() {
         if ($(this).hasClass('sideCatalogBtnDisable')) {
-            $("#"+sideNavBody).css('display', 'none')
+            $("#"+sideNavBody).css('display', 'block')
             $('#' + sideCatalogCtrl).title = "隐藏目录";
         } else {
-            $("#"+sideNavBody).css('display', 'block')
+            $("#"+sideNavBody).css('display', 'none')
             $('#' + sideCatalogCtrl).title = "显示目录";
         };
         $(this).toggleClass('sideCatalogBtnDisable')
@@ -114,24 +130,22 @@ $(document).ready(function() {
             scrollTop: 0
         }, 500)
     });
-    //$sideToolbar = $('#' + sideNavBody);
-    //a.on('scroll', function() {
-      //  var t = a.scrollTop();
-        //我要一直显示文章目录
-        /* if (t > k) {
-            $sideToolbar.css('display', 'block')
+    //默认隐藏目录
+    $("#"+sideNavBody).css('display', 'none')
+    $(this).toggleClass('sideCatalogBtnDisable')
+    $(window).scroll(function() {
+       var t = $(window).scrollTop();
+        //往下滚动x像素就自动显示文章目录
+         if (t > scrollDown) {
+            $('#' + sideNavBody).css('display', 'block')
         } else {
-            $sideToolbar.css('display', 'none')
-        } */
-   // })
-});
+            $('#' + sideNavBody).css('display', 'none')
+        } 
+   })
+}
 //cnblogs生成右侧目录 end
 
-//在文章正文顶部生成TOC start
-$(document).ready(function() {
-    buildTocTable();
-    });
-
+//=============== 在文章正文顶部生成TOC start ===============
 function buildTocTable() {
     var hs = $('#cnblogs_post_body').find('h1,h2,h3,h4,h5,h6');
     if (hs.length < 2)
