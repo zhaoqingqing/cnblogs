@@ -1491,7 +1491,7 @@ a:active {
 /*底部说明:之前用的部分插入代码插件也是pre，所以此css可能会破坏代码高亮*/
 
 #cnblogs_post_body pre {
-    padding: 6px 10px;
+    padding: 0px 10px;
     /*background-color:#f8f8f8;*/
     /*border:1px solid #ccc;*/
     /*line-height:19px;*/
@@ -1794,4 +1794,8 @@ div.feedbackCon {
 
 #blog-news img {
     padding-top: 4px;
+}
+
+.cnblogs_code_toolbar{
+    max-height: 40px !important;
 }
