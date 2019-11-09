@@ -134,8 +134,8 @@ function buildCatlog() {
     $(this).toggleClass('sideCatalogBtnDisable')
     $(window).scroll(function () {
         var t = $(window).scrollTop();
-        //往下滚动x像素就自动显示文章目录
-        if (t > scrollDown) {
+        //当前文章有目录且往下滚动x像素就自动显示文章目录
+        if (t > scrollDown && header.length>2) {
             $('#' + sideNavBody).css('display', 'block')
         } else {
             $('#' + sideNavBody).css('display', 'none')
