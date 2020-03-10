@@ -1726,8 +1726,7 @@ div.feedbackCon {
     padding: 6px 10px;
     padding-left: 170px;
     /*左侧附图片*/
-    /*background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;*/
-    background: #FFFEFE url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_wechat_qingqing.png) no-repeat scroll 1% 50%;
+    background: #FFFEFE url(https://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_200310085909qing_mp_qrcode.png) no-repeat scroll 1% 50%;
     border: 1px solid #ccc;
     font-size: 14px;
     overflow: hidden;
@@ -1741,7 +1740,7 @@ div.feedbackCon {
 /*签名栏图片 - 未有*/
 
 #MySignatureImg {
-    background: url(http://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png) no-repeat scroll 1% 50%;
+    background: url(https://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_200310085909qing_mp_qrcode.png) no-repeat scroll 1% 50%;
     position: fixed;
     width: 130px;
     height: 130px;
