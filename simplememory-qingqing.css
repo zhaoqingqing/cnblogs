@@ -144,8 +144,8 @@ a:active {
 
 #home {
     margin: 0 auto;
-    width: 92%;
-    min-width: 980px;
+    width: 80%;
+    /*min-width: 980px;*/
     background-color: #fff;
     padding: 30px;
     margin-top: 50px;
