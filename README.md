@@ -3,7 +3,7 @@
 
 你也可以把此样式应用于自己的博客园样式，使用指南见下文的 **cnblogs后台设置**
 
-### 博客内容
+### 赵青青博客的内容
 
 - unity3d引擎技术，游戏开发的知识积累
 - 工作点滴 + 项目沉淀 + 自己学习 的总结
@@ -12,9 +12,9 @@
 
 ## 建议浏览器
 
-建议读者使用现代化的浏览器套用或浏览博客，比如`chrome`，`firefox`，`opera`，`ie11及以上版本`，`edge`
+建议读者使用现代化的浏览器套用或浏览博客，比如`chrome`，`edge`，`firefox`，`opera`，`ie11及以上版本`
 
-目前在手机上的显示未适配。
+PS. 目前在手机上的显示未适配，正在计划中
 
 
 
@@ -124,6 +124,12 @@ https://github.com/tiann/markdown-img-upload
 
 - [ ] 重构公告栏样式？
 
+- [ ] 添加live2d（计划中）
+
+- [ ] 修改markdown的代码样式为黑色主题
+
+- [ ] 页面排版修改为居中对齐两侧留空，目前使用Typora发布到博客园之后，每行最大长度会固定。
+
 
 
 ## 开源项目
@@ -132,3 +138,4 @@ https://github.com/tiann/markdown-img-upload
   <br/>​DOC: https://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html
 
 - cnblogs-markdown-css  https://github.com/huizhong/cnblogs-markdown-css
+
