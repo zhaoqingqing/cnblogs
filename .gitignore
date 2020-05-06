@@ -5,3 +5,9 @@
 *.iml
 out
 gen
+
+node_modules
+.project
+.vscode
+.history
+
