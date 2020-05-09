@@ -1,0 +1,36 @@
+/*
+* @file cnblogs.silence-qing
+* Created by qingqing.zhao(569032731@qq.com) 
+* DateTime: 2020/5/9 23:32
+* Desc：silence主题定制for qing
+*/
+
+
+#navList a{
+    text-align: left;
+}
+
+/*首页文章标题色*/
+div.postTitle {
+    margin-bottom: 10px;
+    border-left: 10px solid #cd4900;
+    border-bottom: none;
+    padding: 10px 5px;
+    font-size: 160%;
+    font-weight: 100;
+}
+
+div.postTitle a {
+    color: green !important;
+    font-weight: bold;
+}
+
+/*我的标签添加背景色*/
+#MyTag1_dtTagList a,
+#EntryTag a,
+.catListTag a {
+    background-color: #6FA833 !important;
+    color: #FFFFFF !important;
+    padding: 1px 3px 1px 3px;
+    border-radius: 3px;
+}
