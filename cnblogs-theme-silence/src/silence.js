@@ -559,11 +559,13 @@
                 <button class="esa-toolbar-gotop" data-tips="返回顶部"></button>
                 <button class="esa-toolbar-contents" data-tips="阅读目录"></button>
                 <button class="esa-toolbar-follow" data-tips="关注博主"></button>
+                <button class="esa-toolbar-gobottom" data-tips="滑到底部"></button>
             </div>`);
 
             let $btnGotop = $('.esa-toolbar-gotop');
             let $btnContents = $('.esa-toolbar-contents');
             let $btnFollow = $('.esa-toolbar-follow');
+            let $btnGoBottom = $('.esa-toolbar-gobottom');
 
             if (catalog.enable) {
                 $btnContents.on('click', () => {
@@ -614,6 +616,21 @@
                     })
                 })
             });
+
+            $btnGoBottom.on('click', () => {
+                //文章页下拉到评论区，其它页面拉到顶部
+                if (document.getElementById("blog_post_info_block")) {
+                    $("body,html").animate({
+                        scrollTop: $('#blog_post_info_block').offset().top
+                    }, 150);
+                    console.log("page is article");
+                } else {
+                    $("body,html").animate({
+                        scrollTop: $('#footer').offset().top
+                    }, 150);
+                    console.log("page not article");
+                }
+            });
         }
 
         /**
@@ -647,3 +664,26 @@
         }
     }
 })(jQuery);
+
+function isMobile() {
+    var userAgentInfo = navigator.userAgent;
+    var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+    var mobile_flag = false;
+
+    //根据userAgent判断是否是手机
+    for (var v = 0; v < mobileAgents.length; v++) {
+        if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+            mobile_flag = true;
+            break;
+        }
+    }
+
+     //根据屏幕分辨率判断是否是手机
+     var screen_width = window.screen.width;
+     var screen_height = window.screen.height;
+     if(!mobile_flag && screen_width < 500 && screen_height < 800){
+         mobile_flag = true;
+     }
+
+     return mobile_flag;
+}
