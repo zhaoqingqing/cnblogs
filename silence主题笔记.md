@@ -2,7 +2,9 @@
 
 日期：2020-5-6
 
-cilence版本 v2.0.2
+silence版本 v2.0.2
+
+开源地址：https://github.com/esofar/cnblogs-theme-silence
 
 silence.less中搜索esofar几处位置的github，微信，支付宝等logo建议替换成自己blog中的图片，当然短期内也可以不替换。
 
@@ -10,7 +12,11 @@ silence.js中 无需替换
 
 建议先备份目前自己博客中的脚本和样式，然后对照进行修改
 
+我的环境
 
+windows 10 x64 专业版 1909
+
+nodejs x64  v12.16.3
 
 ## 布署
 
@@ -42,11 +48,13 @@ default.min.csss 不支持放在 **页首HTML代码** 处，需要粘贴到 **�
 
 ## 博客园控件显示设置
 
-博客园后台管理 - 选项中的控件显示设置
+注释每个控件的作用
+
+操作：博客园后台管理 - 选项中的控件显示设置
 
 新随笔：在导航栏增加一个链接，点击就打开创建新随笔界面
 
-首页，联系，RSS订阅：同上，我会不勾选这几项
+首页，联系，RSS订阅：同上
 
 
 
@@ -60,19 +68,33 @@ default.min.csss 不支持放在 **页首HTML代码** 处，需要粘贴到 **�
 
 最后，参考「[部署文档](./docs/deploy.md)」重新安装主题即可。
 
+## 主题思路
+
+极简：不包含任何多余的元素，比如github有同学pull其它样式或特技，开发者是拒绝合并的
+
+也正是因为极简，所以此主题所用到的image也是非常少的，而且image是通过二进制，无需上传
+
+github角标是用canvas渲染的
+
+注意一个细节点，某个标签的数量是隐藏状态，作者特意设计的
+
 ## 主题疑问点
 
 默认大小为1024x768吗或者说是为小屏设计的? 当在高清大屏上阅读博客主页的内容大小是一样的
 
 ## TODO 要修改内容
 
-我的标签，怎样显示更多标签
+Q：我的标签-显示更多标签
+
+A：在管理 - 选项 - 我的标签列表数 设置
 
 左侧<ul>图标更换
 
 原主题的h1~h4标题的颜色功能添加过来，改成当前主题色
 
 上滑和下滑功能迁移 scroll top scroll bottom
+
+文章评论中对方头像未显示
 
 在移动端去掉 最右侧的阅读目录 图标
 
@@ -84,3 +106,12 @@ default.min.csss 不支持放在 **页首HTML代码** 处，需要粘贴到 **�
 
 [新功能]左侧github图标添加吊坠功能，把知乎，微博，公众号像飘带一样连接
 
+[新功能]参考 [![返回主页](https://www.cnblogs.com/skins/custom/images/logo.gif)](https://www.cnblogs.com/CoderAyu/) [码农阿宇](https://www.cnblogs.com/CoderAyu/) 添加博客公告
+
+
+
+## Roadmap
+
+[JavaScript 实现类似微博秀的 Github 挂件](https://juejin.im/entry/588d83548fd9c51dc1e21f83)
+
+[JS网站侧边栏点击伸缩的菜单效果](https://www.huamisucai.com/api/demo.php?url=/demo/20121118-3)

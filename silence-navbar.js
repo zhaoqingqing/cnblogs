@@ -1,10 +1,9 @@
-/*
+<!--
 * @file cnblogs.silence-navbar
 * Created by qingqing.zhao(569032731@qq.com)
 * DateTime: 2020/5/9 22:39
 * Desc：silence主题导航栏脚本
-*/
-<!-- 用法：粘贴以下代码到 - 设置 - 博客侧边栏公告
+用法：粘贴以下代码到 - 设置 - 博客侧边栏公告
 和原主题一样，生成的导航栏在网页dom节点：home - header - navigator - navList(ul) - li
 -->
 <script type="text/javascript">
@@ -41,7 +40,7 @@
                 title: '游戏编程',
                 chilren: [
                     {
-                        title: 'Unity3D项目开发',
+                        title: 'Unity3D项目笔记',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/537262.html',
                     },
                     {
@@ -75,7 +74,7 @@
                 ]
             },
             {
-                title: '其它文章',
+                title: '更多内容',
                 chilren: [
                     {
                         title: '数据结构与算法',
@@ -86,25 +85,37 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/623959.html',
                     },
                     {
-                        title: '其它分类',
+                        title: '我的随笔',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/541042.html',
-                    },
-                ]
-            },
-            {
-                title: '更多内容',
-                chilren: [
-                    {
-                        title: '文章标签',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/tag/',
-                    },
-                    {
-                        title: '文章归档',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/p',
                     },
                     {
                         title: '关于我',
                         url: 'https://zhaoqingqing.github.io/about/',
+                    },
+                    {
+                        title: "文章归档",
+                        url:"https://www.cnblogs.com/zhaoqingqing/p",
+                    },
+                ]
+            },
+            {
+                title: '后台管理',
+                chilren: [
+                    {
+                        title: '博客管理',
+                        url: 'https://i.cnblogs.com/settings',
+                    },
+                    {
+                        title: '新建文章',
+                        url: 'https://i.cnblogs.com/posts/edit',
+                    },
+                    {
+                        title: '友情链接',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/p/10277503.html',
+                    },
+                    {
+                        title:"我的动态",
+                        url:"https://home.cnblogs.com/u/zhaoqingqing/",
                     },
                 ]
             },
@@ -121,7 +132,8 @@
             enable: true,
             license: '署名-非商业性使用-相同方式共享 4.0 国际',
             link: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
-            remark: '关于我：乐于学习未知技术和知识，擅长Unity3D，游戏开发，.NET等领域。'
+            remark: "我是一个乐于分享和学习未知知识，并勤于写作的技术人，擅长游戏开发，客户端技术，微软系技术等领域。" +
+                "<br/>Believe Code Change The World , Just Do IT. Keep It Simple, Stupid Will Make Me Free."
         },
         sponsor: {
             enable: false,
@@ -134,5 +146,10 @@
             link: 'https://github.com/zhaoqingqing',
             target: '_self'
         }
+    })
+
+    $(function()
+    {
+	    $("a").remove("#blog_nav_admin");
     })
 </script>
