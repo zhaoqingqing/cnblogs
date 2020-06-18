@@ -15,7 +15,7 @@
                 title: '编程语言',
                 chilren: [
                     {
-                        title: 'C#语言',
+                        title: 'C#和.NET',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/527577.html',
                     },
                     {
@@ -40,12 +40,8 @@
                 title: '游戏编程',
                 chilren: [
                     {
-                        title: 'Unity3D项目笔记',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/537262.html',
-                    },
-                    {
-                        title: 'Unity3D经验技巧',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/514068.html',
+                        title: 'Cocos2d-x',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/554286.html',
                     },
                     {
                         title: 'uGUI/Unity2D',
@@ -64,21 +60,26 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/835025.html',
                     },
                     {
+                        title: 'Unity3D项目笔记',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/537262.html',
+                    },
+                    {
+                        title: 'Unity3D经验技巧',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/514068.html',
+                    },
+                    {
                         title: 'Unity3D Editor开发',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/529305.html',
                     },
-                    {
-                        title: 'Cocos2d-x',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/554286.html',
-                    },
+
                 ]
             },
             {
                 title: '更多内容',
                 chilren: [
                     {
-                        title: '数据结构与算法',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/610625.html',
+                        title: '关于我',
+                        url: 'https://zhaoqingqing.github.io/about/',
                     },
                     {
                         title: '图形学',
@@ -89,12 +90,12 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/541042.html',
                     },
                     {
-                        title: '关于我',
-                        url: 'https://zhaoqingqing.github.io/about/',
-                    },
-                    {
                         title: "文章归档",
                         url:"https://www.cnblogs.com/zhaoqingqing/p",
+                    },
+                    {
+                        title: '数据结构与算法',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/610625.html',
                     },
                 ]
             },
@@ -150,6 +151,6 @@
 
     $(function()
     {
-	    $("a").remove("#blog_nav_admin");
+        $("a").remove("#blog_nav_admin");
     })
 </script>
