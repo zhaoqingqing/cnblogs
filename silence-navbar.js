@@ -134,7 +134,7 @@
             license: '署名-非商业性使用-相同方式共享 4.0 国际',
             link: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
             remark: "我是一个乐于分享和学习未知知识，并勤于写作的技术人，擅长游戏开发，客户端技术，微软系技术等领域。" +
-                "<br/>Believe Code Change The World , Just Do IT. Keep It Simple, Stupid Will Make Me Free."
+                "<br/>Believe Code Change The World , Just Do IT. Keep It Simple, Self-Discipline Will Make Me Free."
         },
         sponsor: {
             enable: false,
