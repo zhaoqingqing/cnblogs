@@ -1,11 +1,3 @@
-<!--
-* @file cnblogs.silence-navbar
-* Created by qingqing.zhao(569032731@qq.com)
-* DateTime: 2020/5/9 22:39
-* Desc：silence主题导航栏脚本
-用法：粘贴以下代码到 - 设置 - 博客侧边栏公告
-和原主题一样，生成的导航栏在网页dom节点：home - header - navigator - navList(ul) - li
--->
 <script type="text/javascript">
     $.silence({
         avatar: 'https://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png',
@@ -149,8 +141,40 @@
         }
     })
 
-    $(function()
-    {
-        $("a").remove("#blog_nav_admin");
-    })
+$(function()
+{
+    $("a").remove("#blog_nav_admin");/*移除导航栏*/
+    var notice = "    <div id='SiteContent'>\
+<p>不积跬步，无以至千里；<br/>\
+    不积小流，无以成江海。</p>\
+    <p>博客代码：<a href='https://github.com/zhaoqingqing/blog_samplecode' target='_blank'>blog_samplecode</a></p>\
+<br />\
+    <ul>\
+        <li><a href='http://wpa.qq.com/msgrd?v=3&amp;uin=569032731&amp;site=qq&amp;menu=yes' target='_blank'>QQ 联系</a></li>\
+        <li><a style='text-decoration: none' href='http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=wLqooa_xqa6nsamup-LygLGx7qOvrQ' target='_blank'>邮件联系</a></li>\
+        <li><a href='https://github.com/zhaoqingqing' target='_blank'>我的GitHub</a></li>\
+        <li><a href='https://zhaoqingqing.github.io/' target='_blank'>Git Blog</a></li>\
+        <li><a href='https://www.zhihu.com/people/zhaoqingqing' target='_blank'>我在知乎</a></li>\
+        <li><a href='https://www.cnblogs.com/zhaoqingqing/rss' target='_blank'>Rss订阅</a></li>\
+        <li><a href='https://space.cnblogs.com/msg/send/zhaoqingqing' target='_blank'>站内消息</a></li>\
+        <li><a href='https://zhaoqingqing.github.io/about/' target='_blank'>我的资料</a></li>\
+        <li><a href='https://www.cnblogs.com/cate/gamedev/' target='_blank'>园内游戏类</a></li>\
+        <li><a href='https://www.cnblogs.com/zhaoqingqing/p/10277503.html' target='_blank'>友情链接</a></li>\
+    </ul>\
+    </div>";
+    $("#sidebar_news").append(notice);/*增加公告*/
+})
 </script>
+
+
+
+/*
+* @file cnblogs.silence-navbar
+* Created by qingqing.zhao(569032731@qq.com)
+* DateTime: 2020/5/9 22:39
+* Desc：silence主题导航栏脚本
+用法：粘贴以下代码到 - 设置 - 博客侧边栏公告
+和原主题一样，生成的导航栏在网页dom节点：home - header - navigator - navList(ul) - li
+* 备注：自定义公告中内容太多显示不下？
+* 每一行的换行一定需要加\，拷贝到博客园后台之后，也需要查看是否有拷贝到\
+*/

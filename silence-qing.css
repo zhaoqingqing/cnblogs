@@ -9,13 +9,15 @@
 #navList a{
     text-align: left;
 }
-
+/* from simplememory start */
 /*首页文章标题色*/
 div.postTitle {
     margin-bottom: 10px;
     border-left: 10px solid #cd4900;
     border-bottom: none;
-    padding: 10px 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
     font-size: 160%;
     font-weight: 100;
 }
@@ -23,6 +25,10 @@ div.postTitle {
 div.postTitle a {
     color: green !important;
     font-weight: bold;
+}
+
+.postTitle2{
+    margin-left: 4px;
 }
 
 /*我的标签添加背景色*/
@@ -33,4 +39,27 @@ div.postTitle a {
     color: #FFFFFF !important;
     padding: 1px 3px 1px 3px;
     border-radius: 3px;
+}
+/* from simplememory end */
+
+/*自定义公告内容*/
+#SiteContent  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    height: 220px;
+    width: 220px;
+    line-height: 1.8;
+}
+#SiteContent  li{
+    float: left;
+    width: 110px;
+    font-size: 14px;
+    line-height: 2;
+ }
+
+
+/*复写silence中的样式*/
+.esa-profile-avatar{
+    width: 90%;
 }
