@@ -136,6 +136,6 @@ https://github.com/tiann/markdown-img-upload
 
 - mobile-detect.min.js https://github.com/hgoebl/mobile-detect.js
   <br/>​DOC: https://hgoebl.github.io/mobile-detect.js/doc/MobileDetect.html
-
 - cnblogs-markdown-css  https://github.com/huizhong/cnblogs-markdown-css
+- 鼠标特效，11实用，12酷炫 https://github.com/shuiche-it/cnblog-mouse
 
