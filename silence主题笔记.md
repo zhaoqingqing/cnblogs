@@ -10,7 +10,7 @@ silence版本 v2.0.2
 
 开源地址：https://github.com/esofar/cnblogs-theme-silence
 
-文档地址：由于官方repo中的文档总是最新版本的，所以博客使用版本的文档见当前repo目录： **cnblogs\cnblogs-theme-silence\docs**
+文档地址：由于官方repo中的文档是基于官方的最新版本，我使用的是特定版本，我博客使用版本的文档见当前repo目录： **cnblogs\cnblogs-theme-silence\docs**
 
 ### 我的修改
 
@@ -22,7 +22,9 @@ silence.js中 无需替换
 
 到目前(2020-10-13)为止，还没有对主题进行修改，也不建议直接修改源代码，通过扩展的方式进行修改。
 
+### 后续维护
 
+修改silence-navbar.js，上传到博客园后台
 
 ## 布署
 
@@ -42,7 +44,7 @@ silence.js中 无需替换
 
 不建议在原主题的基础上直接修改代码，建议新建一个自己的主题样式文件扩充。
 
-标题不支持太长字符，所以博客名字做了修改： qingqing.zhao’blog ——> Qing's Blog
+博客名字不支持很长字符，所以对``博客名字做了修改： qingqing.zhao’blog ——> Qing's Blog
 
 不支持子标题
 

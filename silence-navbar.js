@@ -71,7 +71,7 @@
                 chilren: [
                     {
                         title: '关于我',
-                        url: 'https://zhaoqingqing.github.io/about/',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/p/about.html',
                     },
                     {
                         title: '图形学',
@@ -104,7 +104,7 @@
                     },
                     {
                         title: '友情链接',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/p/10277503.html',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/p/link.html',
                     },
                     {
                         title:"我的动态",
@@ -157,9 +157,9 @@ $(function()
         <li><a href='https://www.zhihu.com/people/zhaoqingqing' target='_blank'>我在知乎</a></li>\
         <li><a href='https://www.cnblogs.com/zhaoqingqing/rss' target='_blank'>Rss订阅</a></li>\
         <li><a href='https://space.cnblogs.com/msg/send/zhaoqingqing' target='_blank'>站内消息</a></li>\
-        <li><a href='https://zhaoqingqing.github.io/about/' target='_blank'>我的资料</a></li>\
+        <li><a href='https://www.cnblogs.com/zhaoqingqing/p/about.html' target='_blank'>我的资料</a></li>\
         <li><a href='https://www.cnblogs.com/cate/gamedev/' target='_blank'>园内游戏类</a></li>\
-        <li><a href='https://www.cnblogs.com/zhaoqingqing/p/10277503.html' target='_blank'>友情链接</a></li>\
+        <li><a href='https://www.cnblogs.com/zhaoqingqing/p/link.html' target='_blank'>友情链接</a></li>\
     </ul>\
     </div>";
     $("#sidebar_news").append(notice);/*增加公告*/
