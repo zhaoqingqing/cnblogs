@@ -19,12 +19,16 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/563344.html',
                     },
                     {
+                        title: 'Lua/Js/Shell...',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/750410.html',
+                    },
+					{
+                        title: 'Python语言',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/2016077.html',
+                    },
+					{
                         title: '汇编语言',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/835738.html',
-                    },
-                    {
-                        title: 'Lua脚本语言',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/750410.html',
                     },
                 ]
             },
@@ -63,7 +67,10 @@
                         title: 'Unity3D Editor开发',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/529305.html',
                     },
-
+					{
+                        title: '大世界端游开发',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/2016213.html',
+                    },
                 ]
             },
             {
