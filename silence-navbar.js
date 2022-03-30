@@ -1,3 +1,16 @@
+/*
+* @file cnblogs.silence-navbar
+* Created by qingqing.zhao(569032731@qq.com)
+* DateTime: 2020/5/9 22:39
+* Desc：silence主题导航栏脚本，和原主题一样，生成的导航栏在网页dom节点：home - header - navigator - navList(ul) - li
+* 用法：
+*		粘贴以下代码到 - 设置 - 博客侧边栏公告
+* 
+* 注意事项：
+*			自定义公告中内容太多会显示不下
+*			每一行的换行一定需要加\，拷贝到博客园后台之后，也需要查看是否有拷贝到\
+*/
+
 <script type="text/javascript">
     $.silence({
         avatar: 'https://images.cnblogs.com/cnblogs_com/zhaoqingqing/491952/o_avatar_qingqing.png',
@@ -170,18 +183,29 @@ $(function()
     </ul>\
     </div>";
     $("#sidebar_news").append(notice);/*增加公告*/
+	
+	/*fix 签名栏不显示 ，ps：推荐和关注在silence中不生效了，所以先换掉链接*/
+	var obj=document.createElement("div");
+	obj.setAttribute("class","esa-post-signature");
+	var ahref=window.location.href.toString();
+	var signatureHtml = "";
+	signatureHtml += '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="https://www.cnblogs.com/zhaoqingqing/">https://www.cnblogs.com/zhaoqingqing/</a><br />';
+	signatureHtml += '在<a href="http://game.163.com/">【网易游戏】</a>做游戏的程序员，擅长Unity3D，游戏开发，.NET等领域。<br />';
+	signatureHtml += '本文版权归作者和博客园共有，欢迎转载，转载之后请务必在文章明显位置标出原文链接和作者，谢谢。<br />';
+	signatureHtml += '如果本文对您有帮助，请点击<a id="recommendme",href="javascript:void(0);">【推荐】</a>您的赞赏将鼓励我继续创作！想跟我一起进步么？那就<a href="https://www.zhihu.com/people/zhaoqingqing">【关注】</a>我吧。';
+	signatureHtml += '<div id="signatureTips"></div>';
+	obj.innerHTML = signatureHtml;
+	document.getElementsByClassName("postBody")[0].insertBefore(obj,document.getElementsByClassName("clear")[1]);
+
+	function setArticleCopyright() {
+		//设置版权信息，转载出处自动根据页面url生成，不需要加线(hr)
+		var info_str = '<p>本文为作者原创，转载请注明出处：<a class="uri"></a></p><hr><br/>',
+			info = $(info_str),
+			info_a = info.find("a"),
+			url = window.location.href;
+		$(info_a[0]).attr("href", url).text(url);
+		$("#cnblogs_post_body").prepend(info);
+	}
+	setArticleCopyright();
 })
 </script>
-
-
-
-/*
-* @file cnblogs.silence-navbar
-* Created by qingqing.zhao(569032731@qq.com)
-* DateTime: 2020/5/9 22:39
-* Desc：silence主题导航栏脚本
-用法：粘贴以下代码到 - 设置 - 博客侧边栏公告
-和原主题一样，生成的导航栏在网页dom节点：home - header - navigator - navList(ul) - li
-* 备注：自定义公告中内容太多显示不下？
-* 每一行的换行一定需要加\，拷贝到博客园后台之后，也需要查看是否有拷贝到\
-*/
