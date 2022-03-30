@@ -29,7 +29,7 @@
                     },
                     {
                         title: 'C和C++',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/563344.html',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/556352.html',
                     },
                     {
                         title: 'Lua/Js/Shell...',
@@ -81,7 +81,7 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/529305.html',
                     },
 					{
-                        title: '大世界端游开发',
+                        title: '端游开发',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/2016213.html',
                     },
                 ]
