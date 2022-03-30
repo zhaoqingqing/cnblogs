@@ -185,15 +185,13 @@ $(function()
     $("#sidebar_news").append(notice);/*增加公告*/
 	
 	/*fix 签名栏不显示 ，ps：推荐和关注在silence中不生效了，所以先换掉链接*/
-	var obj=document.createElement("div");
+	var obj = document.createElement("div");
 	obj.setAttribute("class","esa-post-signature");
-	var ahref=window.location.href.toString();
+	var ahref = window.location.href.toString();
 	var signatureHtml = "";
-	signatureHtml += '作者：赵青青 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 出处：<a href="https://www.cnblogs.com/zhaoqingqing/">https://www.cnblogs.com/zhaoqingqing/</a><br />';
-	signatureHtml += '在<a href="http://game.163.com/">【网易游戏】</a>做游戏的程序员，擅长Unity3D，游戏开发，.NET等领域。<br />';
+	signatureHtml += '作者：赵青青 &nbsp;&nbsp;一名在<a href="http://game.163.com/">【网易游戏】</a>做游戏开发的程序员，擅长Unity3D，游戏开发，.NET等领域。<br />';
 	signatureHtml += '本文版权归作者和博客园共有，欢迎转载，转载之后请务必在文章明显位置标出原文链接和作者，谢谢。<br />';
 	signatureHtml += '如果本文对您有帮助，请点击<a id="recommendme",href="javascript:void(0);">【推荐】</a>您的赞赏将鼓励我继续创作！想跟我一起进步么？那就<a href="https://www.zhihu.com/people/zhaoqingqing">【关注】</a>我吧。';
-	signatureHtml += '<div id="signatureTips"></div>';
 	obj.innerHTML = signatureHtml;
 	document.getElementsByClassName("postBody")[0].insertBefore(obj,document.getElementsByClassName("clear")[1]);
 
