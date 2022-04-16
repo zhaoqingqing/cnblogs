@@ -41,7 +41,7 @@
                     },
 					{
                         title: '汇编语言',
-                        url: 'https://www.cnblogs.com/zhaoqingqing/category/835738.html',
+                        url: 'https://www.cnblogs.com/zhaoqingqing/category/584461.html',
                     },
                 ]
             },
@@ -61,7 +61,7 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/835738.html',
                     },
                     {
-                        title: 'Unity3D 插件',
+                        title: 'Unity3D插件开发',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/555471.html',
                     },
                     {
@@ -69,7 +69,7 @@
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/835025.html',
                     },
                     {
-                        title: 'Unity3D项目笔记',
+                        title: 'Unity3D项目开发',
                         url: 'https://www.cnblogs.com/zhaoqingqing/category/537262.html',
                     },
                     {
